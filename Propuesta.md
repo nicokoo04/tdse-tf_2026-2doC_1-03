@@ -163,12 +163,6 @@ En resumen, el mercado local carece de una solución abierta, adaptable a maceta
 | | 4.2 | El sistema contará con un sensor de temperatura y humedad ambiente. |
 | **Indicadores** | 5.1 | El sistema contará con un indicador visual (LED) para alertar cuando el depósito de agua general esté vacío o bajo. |
 | | 5.2 | El sistema contará con indicadores de estado de conexión Wi-Fi (conectando, conectado, error). |
-| **Comunicación Wi-Fi** | 6.1 | El sistema se conectará a una red Wi-Fi local para interactuar con la nube/aplicación. |
-| | 6.2 | El sistema enviará periódicamente los datos de temperatura, humedad ambiente y humedad del suelo a la base de datos. |
-| | 6.3 | El sistema deberá recibir comandos manuales (forzar riego, encender luces, modificar umbrales) desde la aplicación. |
-| **Aplicación** | 7.1 | La aplicación mostrará un panel de control con los valores actuales de los sensores. |
-| | 7.2 | La aplicación deberá permitirle al usuario ajustar los umbrales de humedad de suelo que disparan el riego. |
-| | 7.3 | La aplicación mostrará un historial o gráfico de las variables medidas en los últimos días. |
 
 <p align="center"><em>Tabla 2.1: Requisitos del proyecto</em></p>
 
