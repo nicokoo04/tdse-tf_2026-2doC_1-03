@@ -170,9 +170,9 @@ En las tablas 2.2 a 2.4 se presentan 3 casos de uso principales para el sistema.
 | Elemento | Definición |
 | :--- | :--- |
 | **Disparador** | La humedad del suelo desciende por debajo del umbral mínimo configurado. |
-| **Precondiciones** | El sistema está encendido. El depósito de agua tiene suficiente nivel. La conexión Wi-Fi está activa. |
-| **Flujo principal** | El sensor de suelo detecta que la humedad ha bajado del 30% (umbral configurado). El microcontrolador procesa la lectura y enciende la micro-bomba de agua durante un tiempo preestablecido (ej. 5 segundos). Luego de accionar la bomba, el sistema espera un "tiempo de absorción" para volver a medir la humedad y evitar regar de más. Se envía una notificación y un registro a la aplicación indicando que se ha realizado un riego automático. |
-| **Flujos alternativos** | **a.** El sistema intenta regar pero detecta (mediante un sensor de nivel o por falta de cambio en la humedad del suelo tras varios intentos) que el depósito de agua está vacío. El sistema detiene la bomba para no quemarla, enciende el LED indicador de falta de agua y envía una alerta a la aplicación.<br>**b.** El usuario cambia el umbral desde la aplicación justo antes del riego, retrasando la acción si el nuevo umbral es más bajo. |
+| **Precondiciones** | El sistema está encendido. El depósito de agua tiene suficiente nivel. |
+| **Flujo principal** | El sensor de suelo detecta que la humedad ha bajado del umbral configurado. El microcontrolador procesa la lectura y enciende la micro-bomba de agua durante un tiempo preestablecido. Luego de accionar la bomba, el sistema espera un "tiempo de absorción" para volver a medir la humedad y evitar regar de más. |
+| **Flujos alternativos** | El sistema intenta regar pero detecta (mediante un sensor de nivel o por falta de cambio en la humedad del suelo tras varios intentos) que el depósito de agua está vacío. El sistema detiene la bomba para no quemarla y enciende el LED indicador de falta de agua. |
 
 <p align="center"><em>Tabla 2.2: Caso de uso 1: Riego automático por baja humedad</em></p>
 
