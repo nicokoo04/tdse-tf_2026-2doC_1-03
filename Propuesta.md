@@ -190,6 +190,6 @@ En las tablas 2.2 a 2.4 se presentan 3 casos de uso principales para el sistema.
 | **Disparador** | El usuario desea encender las luces rojas manualmente fuera del horario programado. |
 | **Precondiciones** | El sistema está encendido y las luces funcionando correctamente. |
 | **Flujo principal** | A través de una llave el usuario puede prender o apagar las luces LED manualmente. |
-| **Flujos alternativos** | **a.** Las luces ya se encontraban encendidas por el temporizador automático; el accionamiento de la llave manual apaga las luces o no produce cambios (dependiendo de la configuración del circuito).**b.** Falla en el suministro eléctrico, cortocircuito o tira LED quemada; al accionar la llave, las luces permanecen apagadas. |
+| **Flujos alternativos** | **a.** Las luces ya se encontraban encendidas por el temporizador automático; el accionamiento de la llave manual apaga las luces o no produce cambios (dependiendo de la configuración del circuito).<br>**b.** Falla en el suministro eléctrico, cortocircuito o tira LED quemada; al accionar la llave, las luces permanecen apagadas. |
 
 <p align="center"><em>Tabla 2.4: Caso de uso 3: Control remoto de iluminación desde la Aplicación</em></p>
