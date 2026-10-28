@@ -158,11 +158,10 @@ En resumen, el mercado local carece de una solución abierta, adaptable a maceta
 | **Climatización** | 2.1 | El sistema contará con un ventilador para renovar el aire y reducir la temperatura/humedad superficial. |
 | | 2.2 | El ventilador se activará automáticamente si la temperatura o humedad ambiente supera el umbral máximo. |
 | **Iluminación** | 3.1 | El sistema contará con paneles o tiras de luz LED roja orientadas a la planta. |
-| | 3.2 | El encendido de las luces rojas seguirá un ciclo diario programable (fotoperíodo). |
-| **Sensores** | 4.1 | El sistema contará con un sensor de humedad de suelo (preferentemente capacitivo). |
+| | 3.2 | El encendido de las luces rojas seguirá un ciclo diario programable. |
+| **Sensores** | 4.1 | El sistema contará con un sensor de humedad de suelo. |
 | | 4.2 | El sistema contará con un sensor de temperatura y humedad ambiente. |
 | **Indicadores** | 5.1 | El sistema contará con un indicador visual (LED) para alertar cuando el depósito de agua general esté vacío o bajo. |
-| | 5.2 | El sistema contará con indicadores de estado de conexión Wi-Fi (conectando, conectado, error). |
 
 <p align="center"><em>Tabla 2.1: Requisitos del proyecto</em></p>
 
