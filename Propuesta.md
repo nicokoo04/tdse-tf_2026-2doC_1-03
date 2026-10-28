@@ -13,18 +13,18 @@
 ### **1. Selección del proyecto a implementar**
 
 #### **1.1 Objetivo del proyecto y resultados esperados**
-El objetivo de este proyecto es diseñar e implementar un sistema de cuidado de plantas automático para monitorear, controlar y registrar las condiciones ambientales y del suelo de cultivos en interiores (hogares o pequeñas oficinas). Se tiene como objetivo adicional asegurar que el mantenimiento de la planta sea lo más autónomo posible, promoviendo un crecimiento saludable mediante el control preciso del riego, la ventilación y la iluminación (luces rojas para estimulación fotosintética). Por último, se busca en este proyecto poder visualizar el estado de la planta en tiempo real y modificar los parámetros de cuidado (umbrales de temperatura y humedad) a través de una aplicación o interfaz web.
+El objetivo de este proyecto es diseñar e implementar un sistema de cuidado de plantas automático para monitorear, controlar y registrar las condiciones ambientales y del suelo de cultivos en interiores (hogares o pequeñas oficinas). Se tiene como objetivo adicional asegurar que el mantenimiento de la planta sea lo más autónomo posible, promoviendo un crecimiento saludable mediante el control preciso del riego, la ventilación y la iluminación (luces rojas para estimulación fotosintética).
 
 #### **1.2 Proyectos similares**
 Se consideran tres tipos de proyectos posibles que cumplen con los objetivos generales de cuidado de cultivos, todos basados en sistemas de cultivo en interiores:
 
-1. Cuidador automático integral con sensores (suelo y ambiente), ventilación, luz roja y registro en la nube.
+1. Cuidador automático integral con sensores (suelo y ambiente), ventilación y luz roja.
 2. Sistema hidropónico avanzado con control de nutrientes, PH, luces de espectro completo y conectividad.
 3. Maceta de autorriego temporizado básico (sin sensores ambientales ni luz, accionado solo por tiempo).
 
 Para comparar estas alternativas, se tienen en cuenta seis aspectos característicos:
 
-1. **Disponibilidad del hardware:** Se evalúa si el proyecto es fácilmente implementable con componentes electrónicos y bombas de agua disponibles en mercados regionales.
+1. **Disponibilidad del hardware:** Se evalúa si el proyecto es fácilmente implementable con componentes electrónicos y bombas de agua que trabajen con poca tensión.
 2. **Nivel de autonomía:** Se comprende por autonomía a la capacidad del sistema de mantener la planta viva y en condiciones óptimas sin intervención humana directa.
 3. **Confiabilidad/Estabilidad:** Se comprende por confiabilidad a la robustez del sistema frente a fallos (por ejemplo, regar de más y ahogar la planta, o falsas lecturas).
 4. **Tiempo de implementación:** Tiempo total que llevará diseñar, programar e implementar el hardware y software del proyecto seleccionado.
