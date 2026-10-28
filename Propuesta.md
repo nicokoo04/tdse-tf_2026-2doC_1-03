@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://www.fi.uba.ar/images/logo-fiuba.png" alt="Logo FIUBA" width="30%">
+  <img src="https://www.fi.uba.ar/images/logo-fiuba.png" alt="Logo FIUBA" width="50%">
 </p>
 
 # **SmartGrow (Cuidador de Planta Automático)**
