@@ -41,7 +41,7 @@ La siguiente tabla (Tabla 1.2.1) muestra los valores ponderados asignados a cada
     <thead>
         <tr>
             <th rowspan="2">Proyecto</th>
-            <th colspan="2">Cuidador integral (Sensores + Nube)</th>
+            <th colspan="2">Cuidador integral (Sensores)</th>
             <th colspan="2">Hidropónico avanzado (PH + Nutrientes)</th>
             <th colspan="2">Maceta temporizada (Solo riego)</th>
         </tr>
