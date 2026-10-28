@@ -181,15 +181,15 @@ En las tablas 2.2 a 2.4 se presentan 3 casos de uso principales para el sistema.
 | **Disparador** | La temperatura ambiente supera el umbral máximo de confort de la planta. |
 | **Precondiciones** | El sistema está encendido y el sensor DHT/ambiental funcionando correctamente. |
 | **Flujo principal** | El sensor ambiental detecta una temperatura de 32°C, superando el umbral de 28°C fijado por el usuario. El sistema acciona el relé o transistor que enciende el ventilador. El ventilador funciona continuamente renovando el aire del entorno. Una vez que la temperatura ambiente vuelve a descender a 27°C (umbral con histéresis), el ventilador se apaga. Se registra el evento en la plataforma en la nube. |
-| **Flujos alternativos** | **a.** El sensor ambiental se desconecta o falla; el sistema arroja una lectura de error y envía una notificación a la aplicación, apagando actuadores por seguridad para no dejarlos encendidos infinitamente. |
+| **Flujos alternativos** | El sensor ambiental se desconecta o falla; el sistema arroja una lectura de error apagando actuadores por seguridad para no dejarlos encendidos infinitamente. |
 
 <p align="center"><em>Tabla 2.3: Caso de uso 2: Activación de ventilación por alta temperatura</em></p>
 
 | Elemento | Definición |
 | :--- | :--- |
 | **Disparador** | El usuario desea encender las luces rojas manualmente fuera del horario programado. |
-| **Precondiciones** | El sistema está encendido y conectado a la red Wi-Fi. La aplicación está abierta en el dispositivo del usuario. |
-| **Flujo principal** | El usuario ingresa a la aplicación y presiona el botón "Encender luces". La orden viaja por la nube hasta el microcontrolador del proyecto. El microcontrolador recibe el mensaje (MQTT/HTTP), acciona el circuito de iluminación LED roja y devuelve un mensaje de confirmación de estado. La interfaz de la aplicación actualiza el icono de la luz a "encendido". |
-| **Flujos alternativos** | **a.** Hay pérdida de conexión Wi-Fi en el dispositivo. La orden nunca llega y la aplicación muestra un "Error de conexión", las luces permanecen apagadas.<br>**b.** Las luces ya se encontraban encendidas por el temporizador automático; la aplicación informa que el estado actual ya es "Encendido". |
+| **Precondiciones** | El sistema está encendido y las luces funcionando correctamente. |
+| **Flujo principal** | A través de una llave el usuario puede prender o apagar las luces LED manualmente. |
+| **Flujos alternativos** | **a.** Las luces ya se encontraban encendidas por el temporizador automático; el accionamiento de la llave manual apaga las luces o no produce cambios (dependiendo de la configuración del circuito).**b.** Falla en el suministro eléctrico, cortocircuito o tira LED quemada; al accionar la llave, las luces permanecen apagadas. |
 
 <p align="center"><em>Tabla 2.4: Caso de uso 3: Control remoto de iluminación desde la Aplicación</em></p>
