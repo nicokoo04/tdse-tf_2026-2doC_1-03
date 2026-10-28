@@ -123,13 +123,13 @@ La siguiente tabla (Tabla 1.2.1) muestra los valores ponderados asignados a cada
 <p align="center"><em>Tabla 1.2.1: Comparación de proyectos</em></p>
 
 #### **1.3 Selección de proyecto**
-Considerando la Tabla 1.2.1, se elige implementar el **Cuidador automático integral con sensores, luces y ventilación**. El sistema hidropónico avanzado requiere mucho tiempo de implementación, calibración constante de electrodos de PH y bombas dosificadoras de nutrientes, lo cual excedería el tiempo y presupuesto propuesto. Por otro lado, la maceta de autorriego temporizado, si bien es muy barata y rápida de armar, carece de feedback (lazo cerrado); al no medir la humedad real del suelo, puede ahogar la planta o secarla si cambian las condiciones climáticas, y tiene un interés personal bajo por su simpleza.
+Considerando la Tabla 1.2.1, se elige implementar el **Cuidador automático integral con sensores, luces y ventilación**. El sistema hidropónico avanzado requiere mucho tiempo de implementación y supera presupuesto propuesto. Por otro lado, la maceta de autorriego temporizado, si bien es muy barata y rápida de armar; al no medir la humedad real del suelo, puede ahogar la planta o secarla si cambian las condiciones climáticas.
 
 Debido a estas razones, el proyecto a implementar utilizará sensores de humedad de suelo, sensores de temperatura/humedad ambiente (ej. DHT11/DHT22), un sistema de luces rojas para floración/fotosíntesis, ventilación forzada para control de temperatura ambiente y una bomba de agua. La combinación de estos actuadores y sensores forma un ecosistema de lazo cerrado ideal.
 
-En Argentina, cada vez más personas viven en departamentos sin balcones o con poca exposición solar y carecen de tiempo para mantener plantas (ya sean ornamentales o huertas aromáticas). Este proyecto busca una solución tecnológica para que cualquier persona pueda cultivar en interiores sin conocimientos previos de botánica. El proyecto se destaca por incorporar un módulo Wi-Fi que permite registrar los datos en la nube y visualizarlos en una app, permitiendo además forzar riegos o modificar los umbrales operativos de forma remota. 
+En Argentina, cada vez más personas viven en departamentos sin balcones o con poca exposición solar y carecen de tiempo para mantener plantas. Este proyecto busca una solución tecnológica para que cualquier persona pueda cultivar en interiores. 
 
-Los desafíos principales de este proyecto son la convivencia segura entre electrónica y agua (aislamiento), la calibración correcta del sensor de humedad de suelo para evitar corrosión prematura (usando sensores capacitivos en lugar de resistivos) y la lógica de control para evitar rebotes (ej. que la bomba no encienda y apague constantemente por variaciones mínimas de lectura).
+Los desafíos principales de este proyecto son la calibración correcta del sensor de humedad de suelo, que el proyecto no tenga un consumo demasiado elevado y la lógica de control para evitar rebotes (ej. que la bomba no encienda y apague constantemente por variaciones mínimas de lectura).
 
 ###### **1.3.1 Diagrama en bloques**
 En la Figura 1.3.1 se muestra el diagrama en bloques del sistema con los principales módulos del proyecto, incluyendo los actuadores (luces, bomba, ventilador) y los sensores integrados al microcontrolador principal.
