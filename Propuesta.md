@@ -1,14 +1,12 @@
-<p align="center">
-  <img src="https://www.fi.uba.ar/images/logo-fiuba.png" alt="Logo FIUBA" width="30%">
-</p>
+<img src="https://www.fi.uba.ar/images/logo-fiuba.png" alt="image2" width="50%">
 
 # **SmartGrow (Cuidador de Planta Automático)**
 
-**Autor: [Tu Nombre / Marcos Gómez Villafañe]**
+**Autores: [Lucas Santiago Pozo, Nicolás Uriel Koo, Andrés Maturano]**
 
-**Padrón: [Tu Padrón / 105.055]**
+**Padrón: [113786, 113609, 113884]**
 
-**Fecha: 2do cuatrimestre 2024**
+**Fecha: 2do cuatrimestre 2026**
 
 ---
 
