@@ -135,9 +135,9 @@ Los desafíos principales de este proyecto son la convivencia segura entre elect
 En la Figura 1.3.1 se muestra el diagrama en bloques del sistema con los principales módulos del proyecto, incluyendo los actuadores (luces, bomba, ventilador) y los sensores integrados al microcontrolador principal.
 
 <p align="center">
-  <img src="https://via.placeholder.com/600x300.png?text=Diagrama+en+Bloques+Cuidador+de+Plantas" alt="Diagrama de Bloques">
+  <img src="Imagenes/planta.png" alt="Diagrama de estados" width="80%">
 </p>
-<p align="center"><em>Figura 1.3.1: Diagrama en bloques del sistema</em></p>
+<p align="center"><em>Figura x.x: Diagrama de estados unificado</em></p>
 
 ---
 
