@@ -13,7 +13,7 @@
 ### **1. Selección del proyecto a implementar**
 
 #### **1.1 Objetivo del proyecto y resultados esperados**
-El objetivo de este proyecto es diseñar e implementar un sistema de cuidado de plantas automático para monitorear, controlar y registrar las condiciones ambientales y del suelo de cultivos en interiores (hogares o pequeñas oficinas). Se tiene como objetivo adicional asegurar que el mantenimiento de la planta sea lo más autónomo posible, promoviendo un crecimiento saludable mediante el control preciso del riego, la ventilación y la iluminación (luces rojas para estimulación fotosintética). Por último, se busca en este proyecto poder visualizar el estado de la planta en tiempo real y modificar los parámetros de cuidado (umbrales de temperatura y humedad) a través de una aplicación o interfaz web.
+El objetivo de este proyecto es diseñar e implementar un sistema de cuidado de plantas automático para monitorear, controlar y registrar las condiciones ambientales y del suelo de cultivos en interiores (hogares o pequeñas oficinas). Se tiene como objetivo adicional asegurar que el mantenimiento de la planta sea lo más autónomo posible, promoviendo un crecimiento saludable mediante el control preciso del riego, la ventilación y la iluminación (luces rojas para estimulación fotosintética). Por último, se busca en este proyecto poder visualizar el estado del equipo en tiempo real y modificar los parámetros de cuidado (umbrales de temperatura y humedad, control de luces) a través de una aplicación o interfaz web.
 
 #### **1.2 Proyectos similares**
 Se consideran tres tipos de proyectos posibles que cumplen con los objetivos generales de cuidado de cultivos, todos basados en sistemas de cultivo en interiores:
@@ -24,16 +24,16 @@ Se consideran tres tipos de proyectos posibles que cumplen con los objetivos gen
 
 Para comparar estas alternativas, se tienen en cuenta seis aspectos característicos:
 
-1. **Disponibilidad del hardware:** Se evalúa si el proyecto es fácilmente implementable con componentes electrónicos y bombas de agua disponibles en mercados regionales.
+1. **Disponibilidad del hardware:** Se evalúa si el proyecto es fácilmente implementable con componentes electrónicos y bombas de agua que trabajen con poca tensión.
 2. **Nivel de autonomía:** Se comprende por autonomía a la capacidad del sistema de mantener la planta viva y en condiciones óptimas sin intervención humana directa.
 3. **Confiabilidad/Estabilidad:** Se comprende por confiabilidad a la robustez del sistema frente a fallos (por ejemplo, regar de más y ahogar la planta, o falsas lecturas).
 4. **Tiempo de implementación:** Tiempo total que llevará diseñar, programar e implementar el hardware y software del proyecto seleccionado.
 5. **Costo:** El costo total del proyecto.
-6. **Interés personal.**
+6. **Interés personal.** 8
 
 Se decide ponderar los aspectos de la siguiente manera del 1 al 10: Disponibilidad del hardware: 10, Nivel de autonomía: 8, Confiabilidad/Estabilidad: 6, Tiempo de implementación: 8, Costo: 5, Interés personal: 8.
 
-La disponibilidad del hardware es fundamental ya que para este proyecto no se busca salir del mercado regional para importar sensores industriales o bombas costosas. La autonomía es primordial también porque es el principal valor agregado del proyecto; se busca solucionar la falta de tiempo de los usuarios para cuidar sus plantas. La confiabilidad se elige con ponderación 6 porque, si bien es importante no dañar la planta, el entorno de interiores es controlado y menos propenso a factores extremos que desestabilicen los sensores. El tiempo de implementación se elige con un valor de 8 dado que se requiere implementar el proyecto en un periodo de tiempo acotado (un cuatrimestre). El costo se pondera en 5 dado que se busca una buena solución tecnológica y se está dispuesto a invertir en ella, siempre que no escale a los precios de sistemas hidropónicos de nivel comercial. Finalmente, el interés personal toma particular relevancia dado que se busca realizar un proyecto motivador que integre hardware, software y biología, valuando ese aspecto con un puntaje de 8.
+La disponibilidad del hardware es fundamental ya que para este proyecto no se busca importar sensores industriales o bombas costosas de afuera del país. La autonomía es primordial; se busca solucionar la falta de tiempo de los usuarios para cuidar sus plantas. La confiabilidad se elige con ponderación 6 porque, si bien es importante no dañar la planta, el entorno de interiores es controlado y menos propenso a factores extremos que desestabilicen los sensores. El tiempo de implementación se elige con un valor de 8 dado que se requiere implementar el proyecto en un periodo de tiempo acotado (poco menos de un cuatrimestre). El costo se pondera en 5 dado que se busca una buena solución tecnológica y se está dispuesto a invertir en ella, siempre que no escale a los precios de sistemas hidropónicos de nivel comercial. Finalmente, el interés personal toma particular relevancia dado que se busca realizar un proyecto motivador que integre hardware, software y biología, valuando ese aspecto con un puntaje de 8.
 
 La siguiente tabla (Tabla 1.2.1) muestra los valores ponderados asignados a cada proyecto considerado:
 
@@ -123,16 +123,16 @@ La siguiente tabla (Tabla 1.2.1) muestra los valores ponderados asignados a cada
 <p align="center"><em>Tabla 1.2.1: Comparación de proyectos</em></p>
 
 #### **1.3 Selección de proyecto**
-Considerando la Tabla 1.2.1, se elige implementar el **Cuidador automático integral con sensores, luces y ventilación**. El sistema hidropónico avanzado requiere mucho tiempo de implementación, calibración constante de electrodos de PH y bombas dosificadoras de nutrientes, lo cual excedería el tiempo y presupuesto propuesto. Por otro lado, la maceta de autorriego temporizado, si bien es muy barata y rápida de armar, carece de feedback (lazo cerrado); al no medir la humedad real del suelo, puede ahogar la planta o secarla si cambian las condiciones climáticas, y tiene un interés personal bajo por su simpleza.
+Considerando la Tabla 1.2.1, se elige implementar el **Cuidador automático integral con sensores, luces y ventilación**. El sistema hidropónico avanzado requiere mucho tiempo de implementación y supera presupuesto propuesto, porque es un sistema mucho más complejo que el elegido. Por otro lado, la maceta de autorriego temporizado, si bien es muy barata y rápida de armar, carece de retroalimentación; al no medir la humedad real del suelo, puede ahogar la planta o secarla si cambian las condiciones climáticas, y tiene un interés personal bajo por su simpleza.
 
-Debido a estas razones, el proyecto a implementar utilizará sensores de humedad de suelo, sensores de temperatura/humedad ambiente (ej. DHT11/DHT22), un sistema de luces rojas para floración/fotosíntesis, ventilación forzada para control de temperatura ambiente y una bomba de agua. La combinación de estos actuadores y sensores forma un ecosistema de lazo cerrado ideal.
+Debido a estas razones, el proyecto a implementar utilizará sensores de humedad de suelo, sensores de temperatura/humedad ambiente (ej. DHT11/DHT22), un sistema de luces rojas para floración/fotosíntesis, ventilación forzada para control de temperatura ambiente y una bomba de agua. La combinación de estos actuadores y sensores forma un ecosistema con retroalimentación.
 
-En Argentina, cada vez más personas viven en departamentos sin balcones o con poca exposición solar y carecen de tiempo para mantener plantas (ya sean ornamentales o huertas aromáticas). Este proyecto busca una solución tecnológica para que cualquier persona pueda cultivar en interiores sin conocimientos previos de botánica. El proyecto se destaca por incorporar un módulo Wi-Fi que permite registrar los datos en la nube y visualizarlos en una app, permitiendo además forzar riegos o modificar los umbrales operativos de forma remota. 
+En Argentina, cada vez más personas viven en departamentos sin balcones o con poca exposición solar y carecen de tiempo para mantener plantas. Este proyecto busca una solución tecnológica para que cualquier persona pueda cultivar en interiores. El proyecto se destaca por incorporar un módulo Wi-Fi que permite registrar los datos en la nube y visualizarlos en una app, permitiendo además forzar riegos o modificar los umbrales operativos de forma remota. 
 
-Los desafíos principales de este proyecto son la convivencia segura entre electrónica y agua (aislamiento), la calibración correcta del sensor de humedad de suelo para evitar corrosión prematura (usando sensores capacitivos en lugar de resistivos) y la lógica de control para evitar rebotes (ej. que la bomba no encienda y apague constantemente por variaciones mínimas de lectura).
+Los desafíos principales de este proyecto son la calibración correcta de los sensores, la lógica de control para evitar rebotes (ej. que la bomba no encienda y apague constantemente por variaciones mínimas de lectura) y el desarrollo de la aplicación o de la web.
 
 ###### **1.3.1 Diagrama en bloques**
-En la Figura 1.3.1 se muestra el diagrama en bloques del sistema con los principales módulos del proyecto, incluyendo los actuadores (luces, bomba, ventilador) y los sensores integrados al microcontrolador principal.
+En la Figura 1.3.1 se muestra el diagrama en bloques del sistema.
 
 <p align="center">
   <img src="Imagenes/planta.png" alt="Diagrama de estados" width="80%">
@@ -157,9 +157,9 @@ En resumen, el mercado local carece de una solución abierta, adaptable a maceta
 | | 1.2 | El sistema accionará la bomba únicamente cuando la lectura de humedad del suelo caiga por debajo del umbral configurado. |
 | **Climatización** | 2.1 | El sistema contará con un ventilador para renovar el aire y reducir la temperatura/humedad superficial. |
 | | 2.2 | El ventilador se activará automáticamente si la temperatura o humedad ambiente supera el umbral máximo. |
-| **Iluminación** | 3.1 | El sistema contará con paneles o tiras de luz LED roja orientadas a la planta. |
-| | 3.2 | El encendido de las luces rojas seguirá un ciclo diario programable (fotoperíodo). |
-| **Sensores** | 4.1 | El sistema contará con un sensor de humedad de suelo (preferentemente capacitivo). |
+| **Iluminación** | 3.1 | El sistema contará con tiras de luz LED roja orientadas a la planta. |
+| | 3.2 | El encendido de las luces rojas seguirá un ciclo diario programable. |
+| **Sensores** | 4.1 | El sistema contará con un sensor de humedad de suelo. |
 | | 4.2 | El sistema contará con un sensor de temperatura y humedad ambiente. |
 | **Indicadores** | 5.1 | El sistema contará con un indicador visual (LED) para alertar cuando el depósito de agua general esté vacío o bajo. |
 | | 5.2 | El sistema contará con indicadores de estado de conexión Wi-Fi (conectando, conectado, error). |
@@ -178,7 +178,7 @@ En las tablas 2.2 a 2.4 se presentan 3 casos de uso principales para el sistema.
 | :--- | :--- |
 | **Disparador** | La humedad del suelo desciende por debajo del umbral mínimo configurado. |
 | **Precondiciones** | El sistema está encendido. El depósito de agua tiene suficiente nivel. La conexión Wi-Fi está activa. |
-| **Flujo principal** | El sensor de suelo detecta que la humedad ha bajado del 30% (umbral configurado). El microcontrolador procesa la lectura y enciende la micro-bomba de agua durante un tiempo preestablecido (ej. 5 segundos). Luego de accionar la bomba, el sistema espera un "tiempo de absorción" para volver a medir la humedad y evitar regar de más. Se envía una notificación y un registro a la aplicación indicando que se ha realizado un riego automático. |
+| **Flujo principal** | El sensor de suelo detecta que la humedad ha bajado del umbral configurado. El microcontrolador procesa la lectura y enciende la micro-bomba de agua durante un tiempo preestablecido. Luego de accionar la bomba, el sistema espera un "tiempo de absorción" para volver a medir la humedad y evitar regar de más. Se envía una notificación y un registro a la aplicación indicando que se ha realizado un riego automático. |
 | **Flujos alternativos** | **a.** El sistema intenta regar pero detecta (mediante un sensor de nivel o por falta de cambio en la humedad del suelo tras varios intentos) que el depósito de agua está vacío. El sistema detiene la bomba para no quemarla, enciende el LED indicador de falta de agua y envía una alerta a la aplicación.<br>**b.** El usuario cambia el umbral desde la aplicación justo antes del riego, retrasando la acción si el nuevo umbral es más bajo. |
 
 <p align="center"><em>Tabla 2.2: Caso de uso 1: Riego automático por baja humedad</em></p>
