@@ -200,3 +200,34 @@ En las tablas 2.2 a 2.4 se presentan 3 casos de uso principales para el sistema.
 | **Flujos alternativos** | **a.** Hay pérdida de conexión Bluetooth en el dispositivo. La orden nunca llega y la aplicación muestra un "Error de conexión", las luces permanecen apagadas.<br>**b.** Las luces ya se encontraban encendidas por el temporizador automático; la aplicación informa que el estado actual ya es "Encendido". |
 
 <p align="center"><em>Tabla 2.4: Caso de uso 3: Control remoto de iluminación desde la Aplicación</em></p>
+
+
+---
+
+### **3. Alcance de Hardware y Software**
+
+#### **3.1 Hardware a utilizar**
+
+* **Hardware obligatorio de la cátedra:**
+  * **Módulo Bluetooth HM-10:** Para la comunicación inalámbrica y envío/recepción de comandos desde la aplicación móvil.
+  * **Dip Switches:** Para simular la habilitación/anulación manual de los actuadores (ej. forzar luces).
+  * **Botones:** Para simular falta de agua en el tanque (forzar una interrupción).
+  * **LEDs:** Para señalizar estados del sistema (ej. encendido, estado de conexión Bluetooth, alerta de nivel de agua). Con los LEDs también se simularan el funcionamiento de la bomba de agua, el ventilador y las luces Rojas.
+  * **Buzzer:** Para emisión de alarmas sonoras (ej. alerta de tanque de agua vacío o falla en sensores).
+  * **Flash interna del microcontrolador:** Para la persistencia no volátil de la configuración del sistema (umbrales de humedad, temperatura y fotoperíodo).
+  * **Sensores analógicos / digitales:** Sensor de humedad de suelo y sensor de temperatura y humedad ambiente (DHT11/DHT22).
+
+
+#### **3.2 Programación y patrones de software**
+
+* **Programación obligatoria:**
+  * Arquitectura **Bare Metal** (sin RTOS) tipo **Event-Triggered System**.
+  * Código modular y estructurado (Escrutar / Procesar / Actuar).
+  * Patrón **Super-Loop** con ejecutor cíclico y temporización por **SysTick (1 ms)** no bloqueante.
+  * Implementación de **Máquina de Estados Finos (FSM)** modelada e integrada mediante Itemis Create.
+  * **Bajo consumo** y gestión de modos de operación (ej. Modo NORMAL, Modo SET_UP, Modo FALLA).
+  * Uso de periféricos mediante **Polling, Interrupciones y/o DMA**.
+
+* **Programación adicional:**
+  * Protocolo de comunicación serie UART para integración del módulo Bluetooth HM-10.
+  * Control de potencia por modulación de ancho de pulso (**PWM**) para el manejo de la iluminación LED y la velocidad del ventilador.
