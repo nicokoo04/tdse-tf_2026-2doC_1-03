@@ -127,7 +127,7 @@ Considerando la Tabla 1.2.1, se elige implementar el **Cuidador automático inte
 
 Debido a estas razones, el proyecto a implementar utilizará sensores de humedad de suelo, sensores de temperatura/humedad ambiente (ej. DHT11/DHT22), un sistema de luces rojas para floración/fotosíntesis, ventilación forzada para control de temperatura ambiente y una bomba de agua. La combinación de estos actuadores y sensores forma un ecosistema con retroalimentación.
 
-En Argentina, cada vez más personas viven en departamentos sin balcones o con poca exposición solar y carecen de tiempo para mantener plantas. Este proyecto busca una solución tecnológica para que cualquier persona pueda cultivar en interiores. El proyecto se destaca por incorporar un módulo Wi-Fi que permite registrar los datos en la nube y visualizarlos en una app, permitiendo además forzar riegos o modificar los umbrales operativos de forma remota. 
+En Argentina, cada vez más personas viven en departamentos sin balcones o con poca exposición solar y carecen de tiempo para mantener plantas. Este proyecto busca una solución tecnológica para que cualquier persona pueda cultivar en interiores. El proyecto se destaca por incorporar un módulo Bluetooth que permite registrar los datos en la nube y visualizarlos en una app, permitiendo además forzar riegos o modificar los umbrales operativos de forma remota. 
 
 Los desafíos principales de este proyecto son la calibración correcta de los sensores, la lógica de control para evitar rebotes (ej. que la bomba no encienda y apague constantemente por variaciones mínimas de lectura) y el desarrollo de la aplicación o de la web.
 
@@ -162,8 +162,8 @@ En resumen, el mercado local carece de una solución abierta, adaptable a maceta
 | **Sensores** | 4.1 | El sistema contará con un sensor de humedad de suelo. |
 | | 4.2 | El sistema contará con un sensor de temperatura y humedad ambiente. |
 | **Indicadores** | 5.1 | El sistema contará con un indicador visual (LED) para alertar cuando el depósito de agua general esté vacío o bajo. |
-| | 5.2 | El sistema contará con indicadores de estado de conexión Wi-Fi (conectando, conectado, error). |
-| **Comunicación Wi-Fi** | 6.1 | El sistema se conectará a una red Wi-Fi local para interactuar con la nube/aplicación. |
+| | 5.2 | El sistema contará con indicadores de estado de conexión Bluetooth (conectando, conectado, error). |
+| **Comunicación Bluetooth** | 6.1 | El sistema se conectará mediante Bluetooth para interactuar con la nube/aplicación. |
 | | 6.2 | El sistema enviará periódicamente los datos de temperatura, humedad ambiente y humedad del suelo a la base de datos. |
 | | 6.3 | El sistema deberá recibir comandos manuales (forzar riego, encender luces, modificar umbrales) desde la aplicación. |
 | **Aplicación** | 7.1 | La aplicación mostrará un panel de control con los valores actuales de los sensores. |
@@ -177,7 +177,7 @@ En las tablas 2.2 a 2.4 se presentan 3 casos de uso principales para el sistema.
 | Elemento | Definición |
 | :--- | :--- |
 | **Disparador** | La humedad del suelo desciende por debajo del umbral mínimo configurado. |
-| **Precondiciones** | El sistema está encendido. El depósito de agua tiene suficiente nivel. La conexión Wi-Fi está activa. |
+| **Precondiciones** | El sistema está encendido. El depósito de agua tiene suficiente nivel. La conexión Bluetooth está activa. |
 | **Flujo principal** | El sensor de suelo detecta que la humedad ha bajado del umbral configurado. El microcontrolador procesa la lectura y enciende la micro-bomba de agua durante un tiempo preestablecido. Luego de accionar la bomba, el sistema espera un "tiempo de absorción" para volver a medir la humedad y evitar regar de más. Se envía una notificación y un registro a la aplicación indicando que se ha realizado un riego automático. |
 | **Flujos alternativos** | **a.** El sistema intenta regar pero detecta (mediante un sensor de nivel o por falta de cambio en la humedad del suelo tras varios intentos) que el depósito de agua está vacío. El sistema detiene la bomba para no quemarla, enciende el LED indicador de falta de agua y envía una alerta a la aplicación.<br>**b.** El usuario cambia el umbral desde la aplicación justo antes del riego, retrasando la acción si el nuevo umbral es más bajo. |
 
@@ -195,8 +195,8 @@ En las tablas 2.2 a 2.4 se presentan 3 casos de uso principales para el sistema.
 | Elemento | Definición |
 | :--- | :--- |
 | **Disparador** | El usuario desea encender las luces rojas manualmente fuera del horario programado. |
-| **Precondiciones** | El sistema está encendido y conectado a la red Wi-Fi. La aplicación está abierta en el dispositivo del usuario. |
+| **Precondiciones** | El sistema está encendido y conectado mediante Bluetooth. La aplicación está abierta en el dispositivo del usuario. |
 | **Flujo principal** | El usuario ingresa a la aplicación y presiona el botón "Encender luces". La orden viaja por la nube hasta el microcontrolador del proyecto. El microcontrolador recibe el mensaje (MQTT/HTTP), acciona el circuito de iluminación LED roja y devuelve un mensaje de confirmación de estado. La interfaz de la aplicación actualiza el icono de la luz a "encendido". |
-| **Flujos alternativos** | **a.** Hay pérdida de conexión Wi-Fi en el dispositivo. La orden nunca llega y la aplicación muestra un "Error de conexión", las luces permanecen apagadas.<br>**b.** Las luces ya se encontraban encendidas por el temporizador automático; la aplicación informa que el estado actual ya es "Encendido". |
+| **Flujos alternativos** | **a.** Hay pérdida de conexión Bluetooth en el dispositivo. La orden nunca llega y la aplicación muestra un "Error de conexión", las luces permanecen apagadas.<br>**b.** Las luces ya se encontraban encendidas por el temporizador automático; la aplicación informa que el estado actual ya es "Encendido". |
 
 <p align="center"><em>Tabla 2.4: Caso de uso 3: Control remoto de iluminación desde la Aplicación</em></p>
