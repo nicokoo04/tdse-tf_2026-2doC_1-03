@@ -112,7 +112,7 @@ La siguiente tabla (Tabla 1.2.1) muestra los valores asignados a cada proyecto c
         <tr>
             <td><strong>Puntaje Total</strong></td>
             <td align="center">-</td>
-            <td align="center"><strong>381</strong></td>
+            <td align="center"><strong>339</strong></td>
             <td align="center">-</td>
             <td align="center">265</td>
             <td align="center">-</td>
