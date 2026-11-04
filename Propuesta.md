@@ -129,7 +129,7 @@ Debido a estas razones, el proyecto a implementar utilizará sensores de humedad
 
 En Argentina, cada vez más personas viven en departamentos sin balcones o con poca exposición solar y carecen de tiempo para ocuparse de mantener sus plantas. Este proyecto busca una solución tecnológica para que cualquier persona pueda tener plantas en sus casas. El proyecto se destaca por incorporar un módulo Bluetooth que permite registrar los datos y visualizarlos en una app, permitiendo además forzar riegos o modificar los umbrales operativos de forma remota. 
 
-Los desafíos principales de este proyecto son la calibración correcta de los sensores, la lógica de control para evitar rebotes (ej. que la bomba no encienda y apague constantemente por variaciones mínimas de lectura) y el desarrollo de la aplicación o de la web.
+Los desafíos principales de este proyecto son la calibración correcta de los sensores, la lógica de control para evitar rebotes (ej. que la bomba no encienda y apague constantemente por variaciones mínimas de lectura) y el desarrollo de la aplicación.
 
 ###### **1.3.1 Diagrama en bloques**
 En la Figura 1.3.1 se muestra el diagrama en bloques del sistema.
