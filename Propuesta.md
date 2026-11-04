@@ -19,23 +19,23 @@ El objetivo de este proyecto es diseñar e implementar un sistema de cuidado de 
 Se consideran tres tipos de proyectos posibles que cumplen con los objetivos generales de cuidado de cultivos, todos basados en sistemas de cultivo en interiores:
 
 1. Cuidador automático integral con sensores (suelo y ambiente), ventilación, luz roja y registro en la nube.
-2. Sistema hidropónico avanzado con control de nutrientes, PH, luces de espectro completo y conectividad.
-3. Maceta de autorriego temporizado básico (sin sensores ambientales ni luz, accionado solo por tiempo).
+2. Sistema hidropónico avanzado con control de nutrientes, PH, luces y conectividad.
+3. Maceta de autorriego temporizado básico (sin sensores ambientales ni luces, accionado solo por tiempo).
 
 Para comparar estas alternativas, se tienen en cuenta seis aspectos característicos:
 
 1. **Disponibilidad del hardware:** Se evalúa si el proyecto es fácilmente implementable con componentes electrónicos y bombas de agua que trabajen con poca tensión.
-2. **Nivel de autonomía:** Se comprende por autonomía a la capacidad del sistema de mantener la planta viva y en condiciones óptimas sin intervención humana directa.
-3. **Confiabilidad/Estabilidad:** Se comprende por confiabilidad a la robustez del sistema frente a fallos (por ejemplo, regar de más y ahogar la planta, o falsas lecturas).
-4. **Tiempo de implementación:** Tiempo total que llevará diseñar, programar e implementar el hardware y software del proyecto seleccionado.
+2. **Nivel de autonomía:** Entendemos por autonomía a la capacidad del sistema de mantener la planta viva y en buenas condiciones sin intervención humana directa.
+3. **Confiabilidad/Estabilidad:** Se comprende por confiabilidad a la capacidad del sistema de tener la menor probabilidad de fallos (por ejemplo, regar de más y ahogar la planta, o falsas lecturas).
+4. **Tiempo de implementación:** Tiempo total que llevará diseñar, programar e implementar el hardware y software del proyecto.
 5. **Costo:** El costo total del proyecto.
 6. **Interés personal.** 8
 
-Se decide ponderar los aspectos de la siguiente manera del 1 al 10: Disponibilidad del hardware: 10, Nivel de autonomía: 8, Confiabilidad/Estabilidad: 6, Tiempo de implementación: 8, Costo: 5, Interés personal: 8.
+Se decide puntuar los aspectos de la siguiente manera del 1 al 10: Disponibilidad del hardware: 9, Nivel de autonomía: 7, Confiabilidad/Estabilidad: 7, Tiempo de implementación: 9, Costo: 3, Interés personal: 8.
 
-La disponibilidad del hardware es fundamental ya que para este proyecto no se busca importar sensores industriales o bombas costosas de afuera del país. La autonomía es primordial; se busca solucionar la falta de tiempo de los usuarios para cuidar sus plantas. La confiabilidad se elige con ponderación 6 porque, si bien es importante no dañar la planta, el entorno de interiores es controlado y menos propenso a factores extremos que desestabilicen los sensores. El tiempo de implementación se elige con un valor de 8 dado que se requiere implementar el proyecto en un periodo de tiempo acotado (poco menos de un cuatrimestre). El costo se pondera en 5 dado que se busca una buena solución tecnológica y se está dispuesto a invertir en ella, siempre que no escale a los precios de sistemas hidropónicos de nivel comercial. Finalmente, el interés personal toma particular relevancia dado que se busca realizar un proyecto motivador que integre hardware, software y biología, valuando ese aspecto con un puntaje de 8.
+La disponibilidad del hardware es fundamental ya que para este proyecto no se busca importar sensores industriales o bombas costosas de afuera del país. La autonomía es primordial; se busca solucionar la falta de tiempo de los usuarios para cuidar sus plantas. La confiabilidad se puntúa 7 porque, si bien es importante no dañar la planta, el entorno de interiores es controlado y tiene menor riesgo que el exterior. El tiempo de implementación se elige con un valor de 9 dado que se requiere implementar el proyecto en un periodo de tiempo acotado (poco menos de un cuatrimestre). El costo tiene valor 3 dado que los componentes electrónicos y no electrónicos a utlizar no son costosos. Finalmente, el interés personal es 8.
 
-La siguiente tabla (Tabla 1.2.1) muestra los valores ponderados asignados a cada proyecto considerado:
+La siguiente tabla (Tabla 1.2.1) muestra los valores asignados a cada proyecto considerado:
 
 <table>
     <thead>
