@@ -13,12 +13,12 @@
 ### **1. Selección del proyecto a implementar**
 
 #### **1.1 Objetivo del proyecto y resultados esperados**
-El objetivo de este proyecto es diseñar e implementar un sistema de cuidado de plantas automático para monitorear, controlar y registrar las condiciones ambientales y del suelo de cultivos en interiores (hogares o pequeñas oficinas). Se tiene como objetivo adicional asegurar que el mantenimiento de la planta sea lo más autónomo posible, promoviendo un crecimiento saludable mediante el control preciso del riego, la ventilación y la iluminación (luces rojas para estimulación fotosintética). Por último, se busca en este proyecto poder visualizar el estado del equipo en tiempo real y modificar los parámetros de cuidado (umbrales de temperatura y humedad, control de luces) a través de una aplicación o interfaz web.
+El objetivo de este proyecto es diseñar e implementar un sistema de cuidado de plantas automático para monitorear, controlar y registrar las condiciones ambientales y del suelo de cultivos en interiores (hogares o pequeñas oficinas). Se tiene como objetivo adicional asegurar que el mantenimiento de la planta sea lo más autónomo posible, promoviendo un crecimiento saludable mediante el control preciso del riego, la ventilación y la iluminación (luces rojas para estimulación fotosintética). Por último, se busca en este proyecto poder visualizar el estado del equipo en tiempo real y modificar los parámetros de cuidado (umbrales de temperatura y humedad, control de luces) a través de una aplicación.
 
 #### **1.2 Proyectos similares**
 Se consideran tres tipos de proyectos posibles que cumplen con los objetivos generales de cuidado de cultivos, todos basados en sistemas de cultivo en interiores:
 
-1. Cuidador automático integral con sensores (suelo y ambiente), ventilación, luz roja y registro en la nube.
+1. Cuidador automático integral con sensores (suelo y ambiente), ventilación, luz roja y registro en la aplicación.
 2. Sistema hidropónico avanzado con control de nutrientes, PH, luces y conectividad.
 3. Maceta de autorriego temporizado básico (sin sensores ambientales ni luces, accionado solo por tiempo).
 
@@ -41,7 +41,7 @@ La siguiente tabla (Tabla 1.2.1) muestra los valores asignados a cada proyecto c
     <thead>
         <tr>
             <th rowspan="2">Proyecto</th>
-            <th colspan="2">Cuidador integral (Sensores + Nube)</th>
+            <th colspan="2">Cuidador integral (Sensores)</th>
             <th colspan="2">Hidropónico avanzado (PH + Nutrientes)</th>
             <th colspan="2">Maceta temporizada (Solo riego)</th>
         </tr>
@@ -56,7 +56,7 @@ La siguiente tabla (Tabla 1.2.1) muestra los valores asignados a cada proyecto c
     </thead>
     <tbody>
         <tr>
-            <td align="center"><strong>Disponibilidad de Hardware</strong><br>(peso : 10)</td>
+            <td align="center"><strong>Disponibilidad de Hardware</strong><br>(peso : 9)</td>
             <td align="center">9</td>
             <td align="center">90</td>
             <td align="center">4</td>
@@ -65,7 +65,7 @@ La siguiente tabla (Tabla 1.2.1) muestra los valores asignados a cada proyecto c
             <td align="center">100</td>
         </tr>
         <tr>
-            <td align="center"><strong>Nivel de Autonomía</strong><br>(peso : 8)</td>
+            <td align="center"><strong>Nivel de Autonomía</strong><br>(peso : 7)</td>
             <td align="center">9</td>
             <td align="center">72</td>
             <td align="center">10</td>
@@ -74,7 +74,7 @@ La siguiente tabla (Tabla 1.2.1) muestra los valores asignados a cada proyecto c
             <td align="center">24</td>
         </tr>
         <tr>
-            <td align="center"><strong>Confiabilidad / Estabilidad</strong><br>(peso : 6)</td>
+            <td align="center"><strong>Confiabilidad / Estabilidad</strong><br>(peso : 7)</td>
             <td align="center">8</td>
             <td align="center">48</td>
             <td align="center">7</td>
@@ -83,7 +83,7 @@ La siguiente tabla (Tabla 1.2.1) muestra los valores asignados a cada proyecto c
             <td align="center">30</td>
         </tr>
         <tr>
-            <td align="center"><strong>Tiempo de Implementación</strong><br>(peso : 8)</td>
+            <td align="center"><strong>Tiempo de Implementación</strong><br>(peso : 9)</td>
             <td align="center">7</td>
             <td align="center">56</td>
             <td align="center">3</td>
@@ -92,7 +92,7 @@ La siguiente tabla (Tabla 1.2.1) muestra los valores asignados a cada proyecto c
             <td align="center">80</td>
         </tr>
         <tr>
-            <td align="center"><strong>Costo</strong><br>(peso : 5)</td>
+            <td align="center"><strong>Costo</strong><br>(peso : 3)</td>
             <td align="center">7</td>
             <td align="center">35</td>
             <td align="center">3</td>
@@ -127,7 +127,7 @@ Considerando la Tabla 1.2.1, se elige implementar el **Cuidador automático inte
 
 Debido a estas razones, el proyecto a implementar utilizará sensores de humedad de suelo, sensores de temperatura/humedad ambiente (ej. DHT11/DHT22), un sistema de luces rojas para floración/fotosíntesis, ventilación forzada para control de temperatura ambiente y una bomba de agua. La combinación de estos actuadores y sensores forma un ecosistema con retroalimentación.
 
-En Argentina, cada vez más personas viven en departamentos sin balcones o con poca exposición solar y carecen de tiempo para mantener plantas. Este proyecto busca una solución tecnológica para que cualquier persona pueda cultivar en interiores. El proyecto se destaca por incorporar un módulo Bluetooth que permite registrar los datos en la nube y visualizarlos en una app, permitiendo además forzar riegos o modificar los umbrales operativos de forma remota. 
+En Argentina, cada vez más personas viven en departamentos sin balcones o con poca exposición solar y carecen de tiempo para ocuparse de mantener sus plantas. Este proyecto busca una solución tecnológica para que cualquier persona pueda tener plantas en sus casas. El proyecto se destaca por incorporar un módulo Bluetooth que permite registrar los datos y visualizarlos en una app, permitiendo además forzar riegos o modificar los umbrales operativos de forma remota. 
 
 Los desafíos principales de este proyecto son la calibración correcta de los sensores, la lógica de control para evitar rebotes (ej. que la bomba no encienda y apague constantemente por variaciones mínimas de lectura) y el desarrollo de la aplicación o de la web.
 
@@ -143,11 +143,11 @@ En la Figura 1.3.1 se muestra el diagrama en bloques del sistema.
 
 ### **2. Elicitación de requisitos y casos de uso**
 
-En el mercado global existen productos de características similares a las del proyecto, conocidos como "Smart Gardens" (jardines inteligentes). Sin embargo, en Argentina la oferta de estos productos es limitada, muy costosa y a menudo basada en ecosistemas cerrados (cápsulas de semillas propietarias).
+En el mercado global existen productos de características similares a las del proyecto (jardines inteligentes). Sin embargo, en Argentina la oferta de estos productos es limitada y muy costosa.
 
-Como primer competidor se puede mencionar a **Click & Grow**, que ofrece jardines de interior con luces LED y riego pasivo (capilaridad). Sus productos son muy estéticos pero cerrados, el usuario debe comprar sus "pods" de tierra y semillas específicos, y los modelos base no cuentan con sensores ambientales ni ventilación activa, limitando el control real.
+Como primer competidor se puede mencionar a **Click & Grow**, que ofrece jardines de interior con luces LED y riego pasivo. Sus productos son muy estéticos pero cerrados, el usuario debe comprar sus "pods" de tierra y semillas específicos, y los modelos base no cuentan con sensores ambientales ni ventilación activa, limitando la autonomía de su producto.
 
-Un segundo competidor es **AeroGarden**, cuyos sistemas sí poseen bombas de agua temporizadas y notificaciones. Los precios son elevados y requieren importación. Además, la mayoría de estos sistemas carece de ventilación forzada, la cual es crítica en interiores para evitar la proliferación de hongos en las hojas y fortalecer el tallo de la planta, característica que nuestro proyecto sí incluye, sumado a la iluminación LED roja específica.
+Un segundo competidor es **AeroGarden**, cuyos sistemas sí poseen bombas de agua temporizadas y notificaciones. Los precios son elevados y requieren importación. Además, la mayoría de estos sistemas carece de ventilación forzada, la cual es crítica en interiores, característica que nuestro proyecto sí incluye, sumado a la iluminación LED roja específica.
 
 En resumen, el mercado local carece de una solución abierta, adaptable a macetas tradicionales y que ofrezca un monitoreo ambiental completo a un costo accesible.
 
@@ -155,20 +155,19 @@ En resumen, el mercado local carece de una solución abierta, adaptable a maceta
 | :--- | :--- | :--- |
 | **Actuadores de Riego** | 1.1 | El sistema contará con una micro-bomba de agua para regar la planta. |
 | | 1.2 | El sistema accionará la bomba únicamente cuando la lectura de humedad del suelo caiga por debajo del umbral configurado. |
-| **Climatización** | 2.1 | El sistema contará con un ventilador para renovar el aire y reducir la temperatura/humedad superficial. |
+| **Climatización** | 2.1 | El sistema contará con un ventilador para renovar el aire y reducir la temperatura/humedad. |
 | | 2.2 | El ventilador se activará automáticamente si la temperatura o humedad ambiente supera el umbral máximo. |
-| **Iluminación** | 3.1 | El sistema contará con tiras de luz LED roja orientadas a la planta. |
-| | 3.2 | El encendido de las luces rojas seguirá un ciclo diario programable. |
+| **Iluminación** | 3.1 | El sistema contará con tiras de luz LED orientadas a la planta. |
+| | 3.2 | El encendido de las luces seguirá un ciclo diario programable. |
 | **Sensores** | 4.1 | El sistema contará con un sensor de humedad de suelo. |
 | | 4.2 | El sistema contará con un sensor de temperatura y humedad ambiente. |
 | **Indicadores** | 5.1 | El sistema contará con un indicador visual (LED) para alertar cuando el depósito de agua general esté vacío o bajo. |
 | | 5.2 | El sistema contará con indicadores de estado de conexión Bluetooth (conectando, conectado, error). |
-| **Comunicación Bluetooth** | 6.1 | El sistema se conectará mediante Bluetooth para interactuar con la nube/aplicación. |
+| **Comunicación Bluetooth** | 6.1 | El sistema se conectará mediante Bluetooth para interactuar con la aplicación. |
 | | 6.2 | El sistema enviará periódicamente los datos de temperatura, humedad ambiente y humedad del suelo a la base de datos. |
 | | 6.3 | El sistema deberá recibir comandos manuales (forzar riego, encender luces, modificar umbrales) desde la aplicación. |
 | **Aplicación** | 7.1 | La aplicación mostrará un panel de control con los valores actuales de los sensores. |
 | | 7.2 | La aplicación deberá permitirle al usuario ajustar los umbrales de humedad de suelo que disparan el riego. |
-| | 7.3 | La aplicación mostrará un historial o gráfico de las variables medidas en los últimos días. |
 
 <p align="center"><em>Tabla 2.1: Requisitos del proyecto</em></p>
 
@@ -177,7 +176,7 @@ En las tablas 2.2 a 2.4 se presentan 3 casos de uso principales para el sistema.
 | Elemento | Definición |
 | :--- | :--- |
 | **Disparador** | La humedad del suelo desciende por debajo del umbral mínimo configurado. |
-| **Precondiciones** | El sistema está encendido. El depósito de agua tiene suficiente nivel. La conexión Bluetooth está activa. |
+| **Precondiciones** | El sistema está encendido. El depósito de agua tiene suficiente nivel. |
 | **Flujo principal** | El sensor de suelo detecta que la humedad ha bajado del umbral configurado. El microcontrolador procesa la lectura y enciende la micro-bomba de agua durante un tiempo preestablecido. Luego de accionar la bomba, el sistema espera un "tiempo de absorción" para volver a medir la humedad y evitar regar de más. Se envía una notificación y un registro a la aplicación indicando que se ha realizado un riego automático. |
 | **Flujos alternativos** | **a.** El sistema intenta regar pero detecta (mediante un sensor de nivel o por falta de cambio en la humedad del suelo tras varios intentos) que el depósito de agua está vacío. El sistema detiene la bomba para no quemarla, enciende el LED indicador de falta de agua y envía una alerta a la aplicación.<br>**b.** El usuario cambia el umbral desde la aplicación justo antes del riego, retrasando la acción si el nuevo umbral es más bajo. |
 
@@ -187,7 +186,7 @@ En las tablas 2.2 a 2.4 se presentan 3 casos de uso principales para el sistema.
 | :--- | :--- |
 | **Disparador** | La temperatura ambiente supera el umbral máximo de confort de la planta. |
 | **Precondiciones** | El sistema está encendido y el sensor DHT/ambiental funcionando correctamente. |
-| **Flujo principal** | El sensor ambiental detecta una temperatura de 32°C, superando el umbral de 28°C fijado por el usuario. El sistema acciona el relé o transistor que enciende el ventilador. El ventilador funciona continuamente renovando el aire del entorno. Una vez que la temperatura ambiente vuelve a descender a 27°C (umbral con histéresis), el ventilador se apaga. Se registra el evento en la plataforma en la nube. |
+| **Flujo principal** | El sensor ambiental detecta una temperatura de 32°C, superando el umbral de 28°C fijado por el usuario. El sistema acciona el relé o transistor que enciende el ventilador. El ventilador funciona continuamente renovando el aire del entorno. Una vez que la temperatura ambiente vuelve a descender a 27°C (umbral con histéresis), el ventilador se apaga. |
 | **Flujos alternativos** | **a.** El sensor ambiental se desconecta o falla; el sistema arroja una lectura de error y envía una notificación a la aplicación, apagando actuadores por seguridad para no dejarlos encendidos infinitamente. |
 
 <p align="center"><em>Tabla 2.3: Caso de uso 2: Activación de ventilación por alta temperatura</em></p>
@@ -196,7 +195,7 @@ En las tablas 2.2 a 2.4 se presentan 3 casos de uso principales para el sistema.
 | :--- | :--- |
 | **Disparador** | El usuario desea encender las luces rojas manualmente fuera del horario programado. |
 | **Precondiciones** | El sistema está encendido y conectado mediante Bluetooth. La aplicación está abierta en el dispositivo del usuario. |
-| **Flujo principal** | El usuario ingresa a la aplicación y presiona el botón "Encender luces". La orden viaja por la nube hasta el microcontrolador del proyecto. El microcontrolador recibe el mensaje (MQTT/HTTP), acciona el circuito de iluminación LED roja y devuelve un mensaje de confirmación de estado. La interfaz de la aplicación actualiza el icono de la luz a "encendido". |
+| **Flujo principal** | El usuario ingresa a la aplicación y presiona el botón "Encender luces". El microcontrolador recibe el mensaje, acciona el circuito de iluminación LED roja y devuelve un mensaje de confirmación de estado. La interfaz de la aplicación actualiza el icono de la luz a "encendido". |
 | **Flujos alternativos** | **a.** Hay pérdida de conexión Bluetooth en el dispositivo. La orden nunca llega y la aplicación muestra un "Error de conexión", las luces permanecen apagadas.<br>**b.** Las luces ya se encontraban encendidas por el temporizador automático; la aplicación informa que el estado actual ya es "Encendido". |
 
 <p align="center"><em>Tabla 2.4: Caso de uso 3: Control remoto de iluminación desde la Aplicación</em></p>
@@ -211,7 +210,7 @@ En las tablas 2.2 a 2.4 se presentan 3 casos de uso principales para el sistema.
 * **Hardware obligatorio de la cátedra:**
   * **Módulo Bluetooth HM-10:** Para la comunicación inalámbrica y envío/recepción de comandos desde la aplicación móvil.
   * **Dip Switches:** Para simular la habilitación/anulación manual de los actuadores (ej. forzar luces).
-  * **Botones:** Para simular falta de agua en el tanque (forzar una interrupción).
+  * **Botones:** Apagado general del sistema.
   * **LEDs:** Para señalizar estados del sistema (ej. encendido, estado de conexión Bluetooth, alerta de nivel de agua). Con los LEDs también se simularan el funcionamiento de la bomba de agua, el ventilador y las luces Rojas.
   * **Buzzer:** Para emisión de alarmas sonoras (ej. alerta de tanque de agua vacío o falla en sensores).
   * **Flash interna del microcontrolador:** Para la persistencia no volátil de la configuración del sistema (umbrales de humedad, temperatura y fotoperíodo).
