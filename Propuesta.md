@@ -31,9 +31,9 @@ Para comparar estas alternativas, se tienen en cuenta seis aspectos característ
 5. **Costo:** El costo total del proyecto.
 6. **Interés personal.** 8
 
-Se decide puntuar los aspectos de la siguiente manera del 1 al 10: Disponibilidad del hardware: 9, Nivel de autonomía: 7, Confiabilidad/Estabilidad: 7, Tiempo de implementación: 9, Costo: 3, Interés personal: 8.
+Se decide puntuar los aspectos de la siguiente manera del 1 al 10: Disponibilidad del hardware: 10, Nivel de autonomía: 8, Confiabilidad/Estabilidad: 6, Tiempo de implementación: 8, Costo: 5, Interés personal: 8.
 
-La disponibilidad del hardware es fundamental ya que para este proyecto no se busca importar sensores industriales o bombas costosas de afuera del país. La autonomía es primordial; se busca solucionar la falta de tiempo de los usuarios para cuidar sus plantas. La confiabilidad se puntúa 7 porque, si bien es importante no dañar la planta, el entorno de interiores es controlado y tiene menor riesgo que el exterior. El tiempo de implementación se elige con un valor de 9 dado que se requiere implementar el proyecto en un periodo de tiempo acotado (poco menos de un cuatrimestre). El costo tiene valor 3 dado que los componentes electrónicos y no electrónicos a utlizar no son costosos. Finalmente, el interés personal es 8.
+La disponibilidad del hardware es fundamental ya que para este proyecto no se busca importar sensores industriales o bombas costosas de afuera del país. La autonomía es primordial; se busca solucionar la falta de tiempo de los usuarios para cuidar sus plantas. La confiabilidad se puntúa 6 porque, si bien es importante no dañar la planta, el entorno de interiores es controlado y tiene menor riesgo que el exterior. El tiempo de implementación se elige con un valor de 8 dado que se requiere implementar el proyecto en un periodo de tiempo acotado (poco menos de un cuatrimestre). El costo tiene valor 5 dado que los componentes electrónicos y no electrónicos a utlizar no son costosos. Finalmente, el interés personal es 8.
 
 La siguiente tabla (Tabla 1.2.1) muestra los valores asignados a cada proyecto considerado:
 
@@ -56,7 +56,7 @@ La siguiente tabla (Tabla 1.2.1) muestra los valores asignados a cada proyecto c
     </thead>
     <tbody>
         <tr>
-            <td align="center"><strong>Disponibilidad de Hardware</strong><br>(peso : 9)</td>
+            <td align="center"><strong>Disponibilidad de Hardware</strong><br>(peso : 10)</td>
             <td align="center">9</td>
             <td align="center">90</td>
             <td align="center">4</td>
@@ -65,36 +65,36 @@ La siguiente tabla (Tabla 1.2.1) muestra los valores asignados a cada proyecto c
             <td align="center">100</td>
         </tr>
         <tr>
-            <td align="center"><strong>Nivel de Autonomía</strong><br>(peso : 7)</td>
-            <td align="center">9</td>
-            <td align="center">72</td>
+            <td align="center"><strong>Nivel de Autonomía</strong><br>(peso : 8)</td>
+            <td align="center">7</td>
+            <td align="center">56</td>
             <td align="center">10</td>
             <td align="center">80</td>
             <td align="center">3</td>
             <td align="center">24</td>
         </tr>
         <tr>
-            <td align="center"><strong>Confiabilidad / Estabilidad</strong><br>(peso : 7)</td>
-            <td align="center">8</td>
-            <td align="center">48</td>
+            <td align="center"><strong>Confiabilidad / Estabilidad</strong><br>(peso : 6)</td>
+            <td align="center">7</td>
+            <td align="center">42</td>
             <td align="center">7</td>
             <td align="center">42</td>
             <td align="center">5</td>
             <td align="center">30</td>
         </tr>
         <tr>
-            <td align="center"><strong>Tiempo de Implementación</strong><br>(peso : 9)</td>
-            <td align="center">7</td>
-            <td align="center">56</td>
+            <td align="center"><strong>Tiempo de Implementación</strong><br>(peso : 8)</td>
+            <td align="center">9</td>
+            <td align="center">72</td>
             <td align="center">3</td>
             <td align="center">24</td>
             <td align="center">10</td>
             <td align="center">80</td>
         </tr>
         <tr>
-            <td align="center"><strong>Costo</strong><br>(peso : 3)</td>
-            <td align="center">7</td>
-            <td align="center">35</td>
+            <td align="center"><strong>Costo</strong><br>(peso : 5)</td>
+            <td align="center">3</td>
+            <td align="center">15</td>
             <td align="center">3</td>
             <td align="center">15</td>
             <td align="center">9</td>
@@ -102,8 +102,8 @@ La siguiente tabla (Tabla 1.2.1) muestra los valores asignados a cada proyecto c
         </tr>
         <tr>
             <td align="center"><strong>Interés personal</strong><br>(peso : 8)</td>
-            <td align="center">10</td>
-            <td align="center">80</td>
+            <td align="center">8</td>
+            <td align="center">64</td>
             <td align="center">8</td>
             <td align="center">64</td>
             <td align="center">4</td>
