@@ -129,6 +129,15 @@ Debido a estas razones, el proyecto a implementar utilizará sensores de humedad
 
 En Argentina, cada vez más personas viven en departamentos sin balcones o con poca exposición solar y carecen de tiempo para ocuparse de mantener sus plantas. Este proyecto busca una solución tecnológica para que cualquier persona pueda tener plantas en sus casas. El proyecto se destaca por incorporar un módulo Bluetooth que permite registrar los datos y visualizarlos en una app, permitiendo además forzar riegos o modificar los umbrales operativos de forma remota. Si bien en el mercado de argentina existen ya sistemas con sensores de humedad y regado a través de una interfaz bluetooth, no se encuentran sistemas que tengan las misma cantidad de actuadores que el proyecto propuesto, que además tiene luces y un ventilador.
 
+En el mercado global existen productos de características similares a las del proyecto (jardines inteligentes). Sin embargo, en Argentina la oferta de estos productos es limitada y muy costosa.
+
+Como primer competidor se puede mencionar a **Click & Grow**, en particular su modelo **[The Smart Garden 3](https://www.clickandgrow.com/products/the-smart-garden-3)**, que ofrece jardines de interior con luces LED y riego pasivo. Sus productos son muy estéticos pero cerrados, el usuario debe comprar sus "pods" de tierra y semillas específicos, y los modelos base no cuentan con sensores ambientales ni ventilación activa, limitando la autonomía de su producto.
+
+Un segundo competidor es **AeroGarden** con el **[Harvest](https://scottsmiraclegro.com/en-us/brands/aerogarden/products/gardens/harvest/901100-1200.html)**, cuyos sistemas sí poseen bombas de agua temporizadas y notificaciones. Los precios son elevados y requieren importación. Además, la mayoría de estos sistemas carece de ventilación forzada, la cual es crítica en interiores, característica que nuestro proyecto sí incluye, sumado a la iluminación LED roja específica.
+
+En resumen, el mercado local carece de una solución abierta, adaptable a macetas tradicionales y que ofrezca un monitoreo ambiental completo a un costo accesible.
+
+
 Los desafíos principales de este proyecto son la calibración correcta de los sensores, la lógica de control para evitar rebotes (ej. que la bomba no encienda y apague constantemente por variaciones mínimas de lectura) y el desarrollo de la aplicación.
 
 
@@ -143,13 +152,6 @@ En la Figura 1.3.1 se muestra el diagrama en bloques del sistema.
 
 ### **2. Elicitación de requisitos y casos de uso**
 
-En el mercado global existen productos de características similares a las del proyecto (jardines inteligentes). Sin embargo, en Argentina la oferta de estos productos es limitada y muy costosa.
-
-Como primer competidor se puede mencionar a **Click & Grow**, que ofrece jardines de interior con luces LED y riego pasivo. Sus productos son muy estéticos pero cerrados, el usuario debe comprar sus "pods" de tierra y semillas específicos, y los modelos base no cuentan con sensores ambientales ni ventilación activa, limitando la autonomía de su producto.
-
-Un segundo competidor es **AeroGarden**, cuyos sistemas sí poseen bombas de agua temporizadas y notificaciones. Los precios son elevados y requieren importación. Además, la mayoría de estos sistemas carece de ventilación forzada, la cual es crítica en interiores, característica que nuestro proyecto sí incluye, sumado a la iluminación LED roja específica.
-
-En resumen, el mercado local carece de una solución abierta, adaptable a macetas tradicionales y que ofrezca un monitoreo ambiental completo a un costo accesible.
 
 En la Tabla 2.1 se ven los elementos que van a formar parte del proyecto junto con sus funciones.
 
