@@ -144,9 +144,9 @@ Los desafíos principales de este proyecto son la calibración correcta de los s
 En la Figura 1.3.1 se muestra el diagrama en bloques del sistema. Donde se puede ver como el microcontrolador controla los actuadores a través de señales PWM; se ve que las entradas  de sistema son tanto los sensores (sensores), los interruptores y el botón de encendido y apagado general. También se puede ver que nuestro sistema a través de un modulo bluetooth es capaz de interactuar con una aplicación móvil.
 
 <p align="center">
-  <img src="Imagenes/TPF_Sistemas_Embebidos.drawio.png" alt="Diagrama en bloques del sistema" width="80%">
+  <img src="Imagenes/TPF_Sistemas_Embebidos.drawio.png" alt="Diagrama en bloques" width="80%">
 </p>
-<p align="center"><em>Figura 1.3.1: Diagrama de estados unificado</em></p>
+<p align="center"><em>Figura 1.3.1: Diagrama en bloques del sistema</em></p>
 
 ---
 
