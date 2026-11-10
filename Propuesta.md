@@ -127,7 +127,7 @@ Considerando la Tabla 1.2.1, se elige implementar el **Cuidador automático inte
 
 Debido a estas razones, el proyecto a implementar utilizará sensores de humedad de suelo, sensores de temperatura/humedad ambiente (ej. DHT11/DHT22), un sistema de luces rojas para floración/fotosíntesis, ventilación forzada para control de temperatura ambiente y una bomba de agua. La combinación de estos actuadores y sensores forma un ecosistema con retroalimentación.
 
-En Argentina, cada vez más personas viven en departamentos sin balcones o con poca exposición solar y carecen de tiempo para ocuparse de mantener sus plantas. Este proyecto busca una solución tecnológica para que cualquier persona pueda tener plantas en sus casas. El proyecto se destaca por incorporar un módulo Bluetooth que permite registrar los datos y visualizarlos en una app, permitiendo además forzar riegos o modificar los umbrales operativos de forma remota. 
+En Argentina, cada vez más personas viven en departamentos sin balcones o con poca exposición solar y carecen de tiempo para ocuparse de mantener sus plantas. Este proyecto busca una solución tecnológica para que cualquier persona pueda tener plantas en sus casas. El proyecto se destaca por incorporar un módulo Bluetooth que permite registrar los datos y visualizarlos en una app, permitiendo además forzar riegos o modificar los umbrales operativos de forma remota. Si bien en el mercado de argentina existen ya sistemas con sensores de humedad y regado a través de una interfaz bluetooth, no se encuentran sistemas que tengan las misma cantidad de actuadores que el proyecto propuesto, que además tiene luces y un ventilador.
 
 Los desafíos principales de este proyecto son la calibración correcta de los sensores, la lógica de control para evitar rebotes (ej. que la bomba no encienda y apague constantemente por variaciones mínimas de lectura) y el desarrollo de la aplicación.
 
@@ -137,7 +137,7 @@ En la Figura 1.3.1 se muestra el diagrama en bloques del sistema.
 <p align="center">
   <img src="Imagenes/planta.png" alt="Diagrama de estados" width="80%">
 </p>
-<p align="center"><em>Figura x.x: Diagrama de estados unificado</em></p>
+<p align="center"><em>Figura 1.3.1: Diagrama de estados unificado</em></p>
 
 ---
 
