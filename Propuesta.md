@@ -141,10 +141,10 @@ En resumen, el mercado local carece de una solución abierta, adaptable a maceta
 Los desafíos principales de este proyecto son la calibración correcta de los sensores, la lógica de control para evitar rebotes (ej. que la bomba no encienda y apague constantemente por variaciones mínimas de lectura) y el desarrollo de la aplicación.
 
 
-En la Figura 1.3.1 se muestra el diagrama en bloques del sistema.
+En la Figura 1.3.1 se muestra el diagrama en bloques del sistema. Donde se puede ver como el microcontrolador controla los actuadores a través de señales PWM; se ve que las entradas  de sistema son tanto los sensores (sensores), los interruptores y el botón de encendido y apagado general. También se puede ver que nuestro sistema a través de un modulo bluetooth es capaz de interactuar con una aplicación móvil.
 
 <p align="center">
-  <img src="Imagenes/planta.png" alt="Diagrama de estados" width="80%">
+  <img src="Imagenes/TPF_Sistemas_Embebidos.drawio.png" alt="Diagrama en bloques del sistema" width="80%">
 </p>
 <p align="center"><em>Figura 1.3.1: Diagrama de estados unificado</em></p>
 
