@@ -151,6 +151,8 @@ Un segundo competidor es **AeroGarden**, cuyos sistemas sí poseen bombas de agu
 
 En resumen, el mercado local carece de una solución abierta, adaptable a macetas tradicionales y que ofrezca un monitoreo ambiental completo a un costo accesible.
 
+En la Tabla 2.1 se ven los elementos que van a formar parte del proyecto junto con sus funciones.
+
 | Grupo | ID | Descripción |
 | :--- | :--- | :--- |
 | **Actuadores de Riego** | 1.1 | El sistema contará con una micro-bomba de agua para regar la planta. |
