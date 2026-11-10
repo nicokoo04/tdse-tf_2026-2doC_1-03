@@ -131,7 +131,7 @@ En Argentina, cada vez más personas viven en departamentos sin balcones o con p
 
 Los desafíos principales de este proyecto son la calibración correcta de los sensores, la lógica de control para evitar rebotes (ej. que la bomba no encienda y apague constantemente por variaciones mínimas de lectura) y el desarrollo de la aplicación.
 
-###### **1.3.1 Diagrama en bloques**
+
 En la Figura 1.3.1 se muestra el diagrama en bloques del sistema.
 
 <p align="center">
