@@ -1,236 +1,66 @@
-<img src="https://www.fi.uba.ar/images/logo-fiuba.png" alt="image2" width="50%">
+[informe_de_avance.md](https://github.com/user-attachments/files/34702563/informe_de_avance.md)
+# **SmartGrow (Cuidador de Planta Automático) - Informe de Avance**
 
-# **SmartGrow (Cuidador de Planta Automático)**
+**Autores:** Lucas Santiago Pozo, Nicolás Uriel Koo, Andrés Maturano
+**Padrones:** 113786, 113609, 113884
+**Fecha:** 2do cuatrimestre 2026
 
-**Autores: [Lucas Santiago Pozo, Nicolás Uriel Koo, Andrés Maturano]**
+A continuación se detalla el informe de avance del Trabajo Final basándose en los requisitos planteados en la Propuesta, utilizando un esquema de colores para definir el estado de cada punto:
 
-**Padrón: [113786, 113609, 113884]**
+| Estado | Descripción |
+| :---: | :--- |
+| 🟢 | Ya implementado / Completado |
+| 🟡 | En proceso de implementación |
+| 🔴 | No se implementará / Descartado o con retraso crítico |
 
-**Fecha: 2do cuatrimestre 2026**
+### **1. Actuadores de Riego**
+| Req ID | Descripción | Estado |
+| :--- | :--- | :---: |
+| 1.1 | El sistema contará con una micro-bomba de agua para regar la planta. | 🟢 |
+| 1.2 | El sistema accionará la bomba únicamente cuando la lectura de humedad del suelo caiga por debajo del umbral configurado. | 🟡 |
 
---- 
+### **2. Climatización**
+| Req ID | Descripción | Estado |
+| :--- | :--- | :---: |
+| 2.1 | El sistema contará con un ventilador para renovar el aire y reducir la temperatura/humedad. | 🟢 |
+| 2.2 | El ventilador se activará automáticamente si la temperatura o humedad ambiente supera el umbral máximo. | 🟡 |
 
-### **1. Selección del proyecto a implementar**
+### **3. Iluminación**
+| Req ID | Descripción | Estado |
+| :--- | :--- | :---: |
+| 3.1 | El sistema contará con tiras de luz LED orientadas a la planta. | 🟢 |
+| 3.2 | El encendido de las luces seguirá un ciclo diario programable. | 🟡 |
 
-#### **1.1 Objetivo del proyecto y resultados esperados**
-El objetivo de este proyecto es diseñar e implementar un sistema de cuidado de plantas automático para monitorear, controlar y registrar las condiciones ambientales y del suelo de cultivos en interiores (hogares o pequeñas oficinas). Se tiene como objetivo adicional asegurar que el mantenimiento de la planta sea lo más autónomo posible, promoviendo un crecimiento saludable mediante el control preciso del riego, la ventilación y la iluminación (luces rojas para estimulación fotosintética). Por último, se busca en este proyecto poder visualizar el estado del equipo en tiempo real y modificar los parámetros de cuidado (umbrales de temperatura y humedad, control de luces) a través de una aplicación.
+### **4. Sensores**
+| Req ID | Descripción | Estado |
+| :--- | :--- | :---: |
+| 4.1 | El sistema contará con un sensor de humedad de suelo. | 🟢 |
+| 4.2 | El sistema contará con un sensor de temperatura y humedad ambiente (DHT11/DHT22). | 🟢 |
 
-#### **1.2 Proyectos similares**
-Se consideran tres tipos de proyectos posibles que cumplen con los objetivos generales de cuidado de cultivos, todos basados en sistemas de cultivo en interiores:
+### **5. Indicadores y Hardware de Interfaz**
+| Req ID | Descripción | Estado |
+| :--- | :--- | :---: |
+| 5.1 | El sistema contará con un indicador visual (LED) para alertar cuando el depósito de agua general esté vacío o bajo. | 🟢 |
+| 5.2 | El sistema contará con indicadores de estado de conexión Bluetooth (conectando, conectado, error). | 🟡 |
+| 5.3 | Uso de Dip Switches, botones, buzzer y Flash interna del microcontrolador. | 🟡 |
 
-1. Cuidador automático integral con sensores (suelo y ambiente), ventilación, luz roja y registro en la aplicación.
-2. Sistema hidropónico avanzado con control de nutrientes, PH, luces y conectividad.
-3. Maceta de autorriego temporizado básico (sin sensores ambientales ni luces, accionado solo por tiempo).
+### **6. Comunicación Bluetooth (Módulo HM-10)**
+| Req ID | Descripción | Estado |
+| :--- | :--- | :---: |
+| 6.1 | El sistema se conectará mediante Bluetooth para interactuar con la aplicación. | 🟡 |
+| 6.2 | El sistema enviará periódicamente los datos de temperatura, humedad ambiente y humedad del suelo a la base de datos. | 🟡 |
+| 6.3 | El sistema deberá recibir comandos manuales (forzar riego, encender luces, modificar umbrales) desde la aplicación. | 🔴 |
 
-Para comparar estas alternativas, se tienen en cuenta seis aspectos característicos:
+### **7. Aplicación**
+| Req ID | Descripción | Estado |
+| :--- | :--- | :---: |
+| 7.1 | La aplicación mostrará un panel de control con los valores actuales de los sensores. | 🟡 |
+| 7.2 | La aplicación deberá permitirle al usuario ajustar los umbrales de humedad de suelo que disparan el riego. | 🔴 |
 
-1. **Disponibilidad del hardware:** Se evalúa si el proyecto es fácilmente implementable con componentes electrónicos y bombas de agua que trabajen con poca tensión.
-2. **Nivel de autonomía:** Entendemos por autonomía a la capacidad del sistema de mantener la planta viva y en buenas condiciones sin intervención humana directa.
-3. **Confiabilidad/Estabilidad:** Se comprende por confiabilidad a la capacidad del sistema de tener la menor probabilidad de fallos (por ejemplo, regar de más y ahogar la planta, o falsas lecturas).
-4. **Tiempo de implementación:** Tiempo total que llevará diseñar, programar e implementar el hardware y software del proyecto.
-5. **Costo:** El costo total del proyecto.
-6. **Interés personal.** 8
-
-Se decide puntuar los aspectos de la siguiente manera del 1 al 10: Disponibilidad del hardware: 10, Nivel de autonomía: 8, Confiabilidad/Estabilidad: 6, Tiempo de implementación: 8, Costo: 5, Interés personal: 8.
-
-La disponibilidad del hardware es fundamental ya que para este proyecto no se busca importar sensores industriales o bombas costosas de afuera del país. La autonomía es primordial; se busca solucionar la falta de tiempo de los usuarios para cuidar sus plantas. La confiabilidad se puntúa 6 porque, si bien es importante no dañar la planta, el entorno de interiores es controlado y tiene menor riesgo que el exterior. El tiempo de implementación se elige con un valor de 8 dado que se requiere implementar el proyecto en un periodo de tiempo acotado (poco menos de un cuatrimestre). El costo tiene valor 5 dado que los componentes electrónicos y no electrónicos a utlizar no son costosos. Finalmente, el interés personal es 8.
-
-La siguiente tabla (Tabla 1.2.1) muestra los valores asignados a cada proyecto considerado:
-
-<table>
-    <thead>
-        <tr>
-            <th rowspan="2">Proyecto</th>
-            <th colspan="2">Cuidador integral (Sensores)</th>
-            <th colspan="2">Hidropónico avanzado (PH + Nutrientes)</th>
-            <th colspan="2">Maceta temporizada (Solo riego)</th>
-        </tr>
-        <tr>
-            <th>Puntaje</th>
-            <th>Puntaje Ponderado</th>
-            <th>Puntaje</th>
-            <th>Puntaje Ponderado</th>
-            <th>Puntaje</th>
-            <th>Puntaje Ponderado</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td align="center"><strong>Disponibilidad de Hardware</strong><br>(peso : 10)</td>
-            <td align="center">9</td>
-            <td align="center">90</td>
-            <td align="center">4</td>
-            <td align="center">40</td>
-            <td align="center">10</td>
-            <td align="center">100</td>
-        </tr>
-        <tr>
-            <td align="center"><strong>Nivel de Autonomía</strong><br>(peso : 8)</td>
-            <td align="center">7</td>
-            <td align="center">56</td>
-            <td align="center">10</td>
-            <td align="center">80</td>
-            <td align="center">3</td>
-            <td align="center">24</td>
-        </tr>
-        <tr>
-            <td align="center"><strong>Confiabilidad / Estabilidad</strong><br>(peso : 6)</td>
-            <td align="center">7</td>
-            <td align="center">42</td>
-            <td align="center">7</td>
-            <td align="center">42</td>
-            <td align="center">5</td>
-            <td align="center">30</td>
-        </tr>
-        <tr>
-            <td align="center"><strong>Tiempo de Implementación</strong><br>(peso : 8)</td>
-            <td align="center">9</td>
-            <td align="center">72</td>
-            <td align="center">3</td>
-            <td align="center">24</td>
-            <td align="center">10</td>
-            <td align="center">80</td>
-        </tr>
-        <tr>
-            <td align="center"><strong>Costo</strong><br>(peso : 5)</td>
-            <td align="center">3</td>
-            <td align="center">15</td>
-            <td align="center">3</td>
-            <td align="center">15</td>
-            <td align="center">9</td>
-            <td align="center">45</td>
-        </tr>
-        <tr>
-            <td align="center"><strong>Interés personal</strong><br>(peso : 8)</td>
-            <td align="center">8</td>
-            <td align="center">64</td>
-            <td align="center">8</td>
-            <td align="center">64</td>
-            <td align="center">4</td>
-            <td align="center">32</td>
-        </tr>
-        <tr>
-            <td><strong>Puntaje Total</strong></td>
-            <td align="center">-</td>
-            <td align="center"><strong>339</strong></td>
-            <td align="center">-</td>
-            <td align="center">265</td>
-            <td align="center">-</td>
-            <td align="center">311</td>
-        </tr>
-    </tbody>
-</table>
-<p align="center"><em>Tabla 1.2.1: Comparación de proyectos</em></p>
-
-#### **1.3 Selección de proyecto**
-Considerando la Tabla 1.2.1, se elige implementar el **Cuidador automático integral con sensores, luces y ventilación**. El sistema hidropónico avanzado requiere mucho tiempo de implementación y supera presupuesto propuesto, porque es un sistema mucho más complejo que el elegido. Por otro lado, la maceta de autorriego temporizado, si bien es muy barata y rápida de armar, carece de retroalimentación; al no medir la humedad real del suelo, puede ahogar la planta o secarla si cambian las condiciones climáticas, y tiene un interés personal bajo por su simpleza.
-
-Debido a estas razones, el proyecto a implementar utilizará sensores de humedad de suelo, sensores de temperatura/humedad ambiente (ej. DHT11/DHT22), un sistema de luces rojas para floración/fotosíntesis, ventilación forzada para control de temperatura ambiente y una bomba de agua. La combinación de estos actuadores y sensores forma un ecosistema con retroalimentación.
-
-En Argentina, cada vez más personas viven en departamentos sin balcones o con poca exposición solar y carecen de tiempo para ocuparse de mantener sus plantas. Este proyecto busca una solución tecnológica para que cualquier persona pueda tener plantas en sus casas. El proyecto se destaca por incorporar un módulo Bluetooth que permite registrar los datos y visualizarlos en una app, permitiendo además forzar riegos o modificar los umbrales operativos de forma remota. Si bien en el mercado de argentina existen ya sistemas con sensores de humedad y regado a través de una interfaz bluetooth, no se encuentran sistemas que tengan las misma cantidad de actuadores que el proyecto propuesto, que además tiene luces y un ventilador.
-
-En el mercado global existen productos de características similares a las del proyecto (jardines inteligentes). Sin embargo, en Argentina la oferta de estos productos es limitada y muy costosa.
-
-Como primer competidor se puede mencionar a **Click & Grow**, en particular su modelo **[The Smart Garden 3](https://www.clickandgrow.com/products/the-smart-garden-3)**, que ofrece jardines de interior con luces LED y riego pasivo. Sus productos son muy estéticos pero cerrados, el usuario debe comprar sus "pods" de tierra y semillas específicos, y los modelos base no cuentan con sensores ambientales ni ventilación activa, limitando la autonomía de su producto.
-
-Un segundo competidor es **AeroGarden** con el **[Harvest](https://scottsmiraclegro.com/en-us/brands/aerogarden/products/gardens/harvest/901100-1200.html)**, cuyos sistemas sí poseen bombas de agua temporizadas y notificaciones. Los precios son elevados y requieren importación. Además, la mayoría de estos sistemas carece de ventilación forzada, la cual es crítica en interiores, característica que nuestro proyecto sí incluye, sumado a la iluminación LED roja específica.
-
-En resumen, el mercado local carece de una solución abierta, adaptable a macetas tradicionales y que ofrezca un monitoreo ambiental completo a un costo accesible.
-
-
-Los desafíos principales de este proyecto son la calibración correcta de los sensores, la lógica de control para evitar rebotes (ej. que la bomba no encienda y apague constantemente por variaciones mínimas de lectura) y el desarrollo de la aplicación.
-
-
-En la Figura 1.3.1 se muestra el diagrama en bloques del sistema. Donde se puede ver como el microcontrolador controla los actuadores a través de señales PWM; se ve que las entradas  de sistema son tanto los sensores (sensores), los interruptores y el botón de encendido y apagado general. También se puede ver que nuestro sistema a través de un modulo bluetooth es capaz de interactuar con una aplicación móvil.
-
-<p align="center">
-  <img src="Imagenes/TPF_Sistemas_Embebidos.drawio.png" alt="Diagrama en bloques" width="80%">
-</p>
-<p align="center"><em>Figura 1.3.1: Diagrama en bloques del sistema</em></p>
-
----
-
-### **2. Elicitación de requisitos y casos de uso**
-
-
-En la Tabla 2.1 se ven los elementos que van a formar parte del proyecto junto con sus funciones.
-
-| Grupo | ID | Descripción |
-| :--- | :--- | :--- |
-| **Actuadores de Riego** | 1.1 | El sistema contará con una micro-bomba de agua para regar la planta. |
-| | 1.2 | El sistema accionará la bomba únicamente cuando la lectura de humedad del suelo caiga por debajo del umbral configurado. |
-| **Climatización** | 2.1 | El sistema contará con un ventilador para renovar el aire y reducir la temperatura/humedad. |
-| | 2.2 | El ventilador se activará automáticamente si la temperatura o humedad ambiente supera el umbral máximo. |
-| **Iluminación** | 3.1 | El sistema contará con tiras de luz LED orientadas a la planta. |
-| | 3.2 | El encendido de las luces seguirá un ciclo diario programable. |
-| **Sensores** | 4.1 | El sistema contará con un sensor de humedad de suelo. |
-| | 4.2 | El sistema contará con un sensor de temperatura y humedad ambiente. |
-| **Indicadores** | 5.1 | El sistema contará con un indicador visual (LED) para alertar cuando el depósito de agua general esté vacío o bajo. |
-| | 5.2 | El sistema contará con indicadores de estado de conexión Bluetooth (conectando, conectado, error). |
-| **Comunicación Bluetooth** | 6.1 | El sistema se conectará mediante Bluetooth para interactuar con la aplicación. |
-| | 6.2 | El sistema enviará periódicamente los datos de temperatura, humedad ambiente y humedad del suelo a la base de datos. |
-| | 6.3 | El sistema deberá recibir comandos manuales (forzar riego, encender luces, modificar umbrales) desde la aplicación. |
-| **Aplicación** | 7.1 | La aplicación mostrará un panel de control con los valores actuales de los sensores. |
-| | 7.2 | La aplicación deberá permitirle al usuario ajustar los umbrales de humedad de suelo que disparan el riego. |
-
-<p align="center"><em>Tabla 2.1: Requisitos del proyecto</em></p>
-
-En las tablas 2.2 a 2.4 se presentan 3 casos de uso principales para el sistema.
-
-| Elemento | Definición |
-| :--- | :--- |
-| **Disparador** | La humedad del suelo desciende por debajo del umbral mínimo configurado. |
-| **Precondiciones** | El sistema está encendido. El depósito de agua tiene suficiente nivel. |
-| **Flujo principal** | El sensor de suelo detecta que la humedad ha bajado del umbral configurado. El microcontrolador procesa la lectura y enciende la micro-bomba de agua durante un tiempo preestablecido. Luego de accionar la bomba, el sistema espera un "tiempo de absorción" para volver a medir la humedad y evitar regar de más. Se envía una notificación y un registro a la aplicación indicando que se ha realizado un riego automático. |
-| **Flujos alternativos** | **a.** El sistema intenta regar pero detecta (mediante un sensor de nivel o por falta de cambio en la humedad del suelo tras varios intentos) que el depósito de agua está vacío. El sistema detiene la bomba para no quemarla, enciende el LED indicador de falta de agua y envía una alerta a la aplicación.<br>**b.** El usuario cambia el umbral desde la aplicación justo antes del riego, retrasando la acción si el nuevo umbral es más bajo. |
-
-<p align="center"><em>Tabla 2.2: Caso de uso 1: Riego automático por baja humedad</em></p>
-
-| Elemento | Definición |
-| :--- | :--- |
-| **Disparador** | La temperatura ambiente supera el umbral máximo de confort de la planta. |
-| **Precondiciones** | El sistema está encendido y el sensor DHT/ambiental funcionando correctamente. |
-| **Flujo principal** | El sensor ambiental detecta una temperatura de 32°C, superando el umbral de 28°C fijado por el usuario. El sistema acciona el relé o transistor que enciende el ventilador. El ventilador funciona continuamente renovando el aire del entorno. Una vez que la temperatura ambiente vuelve a descender a 27°C (umbral con histéresis), el ventilador se apaga. |
-| **Flujos alternativos** | **a.** El sensor ambiental se desconecta o falla; el sistema arroja una lectura de error y envía una notificación a la aplicación, apagando actuadores por seguridad para no dejarlos encendidos infinitamente. |
-
-<p align="center"><em>Tabla 2.3: Caso de uso 2: Activación de ventilación por alta temperatura</em></p>
-
-| Elemento | Definición |
-| :--- | :--- |
-| **Disparador** | El usuario desea encender las luces rojas manualmente fuera del horario programado. |
-| **Precondiciones** | El sistema está encendido y conectado mediante Bluetooth. La aplicación está abierta en el dispositivo del usuario. |
-| **Flujo principal** | El usuario ingresa a la aplicación y presiona el botón "Encender luces". El microcontrolador recibe el mensaje, acciona el circuito de iluminación LED roja y devuelve un mensaje de confirmación de estado. La interfaz de la aplicación actualiza el icono de la luz a "encendido". |
-| **Flujos alternativos** | **a.** Hay pérdida de conexión Bluetooth en el dispositivo. La orden nunca llega y la aplicación muestra un "Error de conexión", las luces permanecen apagadas.<br>**b.** Las luces ya se encontraban encendidas por el temporizador automático; la aplicación informa que el estado actual ya es "Encendido". |
-
-<p align="center"><em>Tabla 2.4: Caso de uso 3: Control remoto de iluminación desde la Aplicación</em></p>
-
-
----
-
-### **3. Alcance de Hardware y Software**
-
-#### **3.1 Hardware a utilizar**
-
-- **Hardware obligatorio de la cátedra:**
-  * **Módulo Bluetooth HM-10:** Para la comunicación inalámbrica y envío/recepción de comandos desde la aplicación móvil.
-  * **Dip Switches:** Para simular la habilitación/anulación manual de los actuadores (ej. forzar luces).
-  * **Botones:** Apagado general del sistema.
-  * **LEDs:** Para señalizar estados del sistema (ej. encendido, estado de conexión Bluetooth, alerta de nivel de agua). Con los LEDs también se simularan el funcionamiento de la bomba de agua, el ventilador y las luces Rojas.
-  * **Buzzer:** Para emisión de alarmas sonoras (ej. alerta de tanque de agua vacío o falla en sensores).
-  * **Flash interna del microcontrolador:** Para la persistencia no volátil de la configuración del sistema (umbrales de humedad, temperatura y fotoperíodo).
-  * **Sensores analógicos / digitales:** Sensor de humedad de suelo y sensor de temperatura y humedad ambiente (DHT11/DHT22).
-
-
-#### **3.2 Programación y patrones de software**
-
-- **Programación obligatoria:**
-  * Arquitectura **Bare Metal** (sin RTOS) tipo **Event-Triggered System**.
-  * Código modular y estructurado (Escrutar / Procesar / Actuar).
-  * Patrón **Super-Loop** con ejecutor cíclico y temporización por **SysTick (1 ms)** no bloqueante.
-  * Implementación de **Máquina de Estados Finos (FSM)** modelada e integrada mediante Itemis Create.
-  * **Bajo consumo** y gestión de modos de operación (ej. Modo NORMAL, Modo SET_UP, Modo FALLA).
-  * Uso de periféricos mediante **Polling, Interrupciones y/o DMA**.
-
-- **Programación adicional:**
-  * Protocolo de comunicación serie UART para integración del módulo Bluetooth HM-10.
-  * Control de potencia por modulación de ancho de pulso (**PWM**) para el manejo de la iluminación LED y la velocidad del ventilador.
+### **8. Requisitos de Software**
+| Req ID | Descripción | Estado |
+| :--- | :--- | :---: |
+| 8.1 | Arquitectura Bare Metal, modular (Escrutar / Procesar / Actuar) y patrón Super-Loop. | 🟢 |
+| 8.2 | Máquina de Estados Finos (FSM) y temporización por SysTick no bloqueante. | 🟡 |
+| 8.3 | Gestión de modos de operación (NORMAL, SET_UP, FALLA) e implementación de bajo consumo. | 🟡 |
+| 8.4 | Control de potencia por PWM y protocolo UART para Bluetooth. | 🟡 |
