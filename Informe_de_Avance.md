@@ -16,19 +16,19 @@ A continuación se detalla el informe de avance del Trabajo Final basándose en 
 ### **1. Actuadores de Riego**
 | Req ID | Descripción | Estado |
 | :--- | :--- | :---: |
-| 1.1 | El sistema contará con una micro-bomba de agua para regar la planta. | 🟢 |
+| 1.1 | El sistema contará con una micro-bomba de agua para regar la planta (aplicación real mediante señalización LED). | 🟢 |
 | 1.2 | El sistema accionará la bomba únicamente cuando la lectura de humedad del suelo caiga por debajo del umbral configurado. | 🟡 |
 
 ### **2. Climatización**
 | Req ID | Descripción | Estado |
 | :--- | :--- | :---: |
-| 2.1 | El sistema contará con un ventilador para renovar el aire y reducir la temperatura/humedad. | 🟢 |
+| 2.1 | El sistema contará con un ventilador para renovar el aire y reducir la temperatura/humedad (aplicación real mediante señalización LED). | 🟢 |
 | 2.2 | El ventilador se activará automáticamente si la temperatura o humedad ambiente supera el umbral máximo. | 🟡 |
 
 ### **3. Iluminación**
 | Req ID | Descripción | Estado |
 | :--- | :--- | :---: |
-| 3.1 | El sistema contará con tiras de luz LED orientadas a la planta. | 🟢 |
+| 3.1 | El sistema contará con tiras de luz LED orientadas a la planta (aplicación real mediante señalización LED). | 🟢 |
 | 3.2 | El encendido de las luces seguirá un ciclo diario programable. | 🟡 |
 
 ### **4. Sensores**
@@ -49,13 +49,13 @@ A continuación se detalla el informe de avance del Trabajo Final basándose en 
 | :--- | :--- | :---: |
 | 6.1 | El sistema se conectará mediante Bluetooth para interactuar con la aplicación. | 🟡 |
 | 6.2 | El sistema enviará periódicamente los datos de temperatura, humedad ambiente y humedad del suelo a la base de datos. | 🟡 |
-| 6.3 | El sistema deberá recibir comandos manuales (forzar riego, encender luces, modificar umbrales) desde la aplicación. | 🔴 |
+| 6.3 | El sistema deberá recibir comandos manuales (forzar riego, encender luces, modificar umbrales) desde la aplicación. | 🟡 |
 
 ### **7. Aplicación**
 | Req ID | Descripción | Estado |
 | :--- | :--- | :---: |
 | 7.1 | La aplicación mostrará un panel de control con los valores actuales de los sensores. | 🟡 |
-| 7.2 | La aplicación deberá permitirle al usuario ajustar los umbrales de humedad de suelo que disparan el riego. | 🔴 |
+| 7.2 | La aplicación deberá permitirle al usuario ajustar los umbrales de humedad de suelo que disparan el riego. | 🟡 |
 
 ### **8. Requisitos de Software**
 | Req ID | Descripción | Estado |
