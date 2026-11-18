@@ -60,7 +60,7 @@ A continuación se detalla el informe de avance del Trabajo Final basándose en 
 ### **8. Requisitos de Software**
 | Req ID | Descripción | Estado |
 | :--- | :--- | :---: |
-| 8.1 | Arquitectura Bare Metal, modular (Escrutar / Procesar / Actuar) y patrón Super-Loop. | 🟢 |
+| 8.1 | Arquitectura Bare Metal, modular (Escrutar / Procesar / Actuar) y patrón Super-Loop. | 🟡 |
 | 8.2 | Máquina de Estados Finos (FSM) y temporización por SysTick no bloqueante. | 🟡 |
 | 8.3 | Gestión de modos de operación (NORMAL, SET_UP, FALLA) e implementación de bajo consumo. | 🟡 |
 | 8.4 | Control de potencia por PWM y protocolo UART para Bluetooth. | 🟡 |
