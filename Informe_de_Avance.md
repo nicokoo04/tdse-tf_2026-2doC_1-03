@@ -17,13 +17,13 @@ A continuación se detalla el informe de avance del Trabajo Final basándose en 
 | Req ID | Descripción | Estado |
 | :--- | :--- | :---: |
 | 1.1 | El sistema contará con una micro-bomba de agua para regar la planta (aplicación real mediante señalización LED). | 🟢 |
-| 1.2 | El sistema accionará la bomba únicamente cuando la lectura de humedad del suelo caiga por debajo del umbral configurado. | 🟡 |
+| 1.2 | El sistema accionará la bomba únicamente cuando la lectura de humedad del suelo caiga por debajo del umbral configurado. | 🟢 |
 
 ### **2. Climatización**
 | Req ID | Descripción | Estado |
 | :--- | :--- | :---: |
 | 2.1 | El sistema contará con un ventilador para renovar el aire y reducir la temperatura/humedad (aplicación real mediante señalización LED). | 🟢 |
-| 2.2 | El ventilador se activará automáticamente si la temperatura o humedad ambiente supera el umbral máximo. | 🟡 |
+| 2.2 | El ventilador se activará automáticamente si la temperatura o humedad ambiente supera el umbral máximo. | 🟢 |
 
 ### **3. Iluminación**
 | Req ID | Descripción | Estado |
@@ -35,7 +35,7 @@ A continuación se detalla el informe de avance del Trabajo Final basándose en 
 | Req ID | Descripción | Estado |
 | :--- | :--- | :---: |
 | 4.1 | El sistema contará con un sensor de humedad de suelo. | 🟢 |
-| 4.2 | El sistema contará con un sensor de temperatura y humedad ambiente (DHT11/DHT22). | 🟢 |
+| 4.2 | El sistema contará con un sensor de temperatura y humedad ambiente (DHT11/DHT22). | 🟡 |
 
 ### **5. Indicadores y Hardware de Interfaz**
 | Req ID | Descripción | Estado |
