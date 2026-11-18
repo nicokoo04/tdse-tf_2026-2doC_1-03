@@ -29,7 +29,7 @@ A continuación se detalla el informe de avance del Trabajo Final basándose en 
 | Req ID | Descripción | Estado |
 | :--- | :--- | :---: |
 | 3.1 | El sistema contará con tiras de luz LED orientadas a la planta (aplicación real mediante señalización LED). | 🟢 |
-| 3.2 | El encendido de las luces seguirá un ciclo diario programable. | 🟡 |
+| 3.2 | El encendido de las luces seguirá un ciclo diario programable. | 🟢 |
 
 ### **4. Sensores**
 | Req ID | Descripción | Estado |
@@ -40,7 +40,7 @@ A continuación se detalla el informe de avance del Trabajo Final basándose en 
 ### **5. Indicadores y Hardware de Interfaz**
 | Req ID | Descripción | Estado |
 | :--- | :--- | :---: |
-| 5.1 | El sistema contará con un indicador visual (LED) para alertar cuando el depósito de agua general esté vacío o bajo. | 🟢 |
+| 5.1 | El sistema contará con un indicador visual (LED) para alertar cuando el depósito de agua general esté vacío o bajo. | 🟡 |
 | 5.2 | El sistema contará con indicadores de estado de conexión Bluetooth (conectando, conectado, error). | 🟡 |
 | 5.3 | Uso de Dip Switches, botones, buzzer y Flash interna del microcontrolador. | 🟡 |
 
