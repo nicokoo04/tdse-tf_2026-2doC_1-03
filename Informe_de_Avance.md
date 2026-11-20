@@ -1,4 +1,3 @@
-[informe_de_avance.md](https://github.com/user-attachments/files/34702563/informe_de_avance.md)
 # **SmartGrow (Cuidador de Planta Automático) - Informe de Avance**
 
 **Autores:** Lucas Santiago Pozo, Nicolás Uriel Koo, Andrés Maturano
