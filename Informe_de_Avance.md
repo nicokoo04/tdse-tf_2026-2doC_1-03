@@ -34,21 +34,21 @@ A continuación se detalla el informe de avance del Trabajo Final basándose en 
 | Req ID | Descripción | Estado |
 | :--- | :--- | :---: |
 | 4.1 | El sistema contará con un sensor de humedad de suelo. | 🟢 |
-| 4.2 | El sistema contará con un sensor de temperatura y humedad ambiente (DHT11/DHT22). | 🟡 |
+| 4.2 | El sistema contará con un sensor de temperatura y humedad ambiente (DHT11/DHT22). | 🔴 |
 
 ### **5. Indicadores y Hardware de Interfaz**
 | Req ID | Descripción | Estado |
 | :--- | :--- | :---: |
-| 5.1 | El sistema contará con un indicador visual (LED) para alertar cuando el depósito de agua general esté vacío o bajo. | 🟡 |
-| 5.2 | El sistema contará con indicadores de estado de conexión Bluetooth (conectando, conectado, error). | 🟡 |
+| 5.1 | El sistema contará con un indicador visual (LED) para alertar cuando el depósito de agua general esté vacío o bajo. | 🔴 |
+| 5.2 | El sistema contará con indicadores de estado de conexión Bluetooth (conectando, conectado, error). | 🟢 |
 | 5.3 | Uso de Dip Switches, botones, buzzer y Flash interna del microcontrolador. | 🟡 |
 
 ### **6. Comunicación Bluetooth (Módulo HM-10)**
 | Req ID | Descripción | Estado |
 | :--- | :--- | :---: |
-| 6.1 | El sistema se conectará mediante Bluetooth para interactuar con la aplicación. | 🟡 |
+| 6.1 | El sistema se conectará mediante Bluetooth para interactuar con la aplicación. | 🟢 |
 | 6.2 | El sistema enviará periódicamente los datos de temperatura, humedad ambiente y humedad del suelo a la base de datos. | 🟡 |
-| 6.3 | El sistema deberá recibir comandos manuales (forzar riego, encender luces, modificar umbrales) desde la aplicación. | 🟡 |
+| 6.3 | El sistema deberá recibir comandos manuales (forzar riego, encender luces, modificar umbrales) desde la aplicación. | 🟢 |
 
 ### **7. Aplicación**
 | Req ID | Descripción | Estado |
